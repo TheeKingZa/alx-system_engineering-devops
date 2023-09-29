@@ -1,0 +1,10 @@
+#!/bin/bash
+# This script displays lines containing the word "bash" to find the PID of the Bash process
+
+# shellcheck disable=SC2009
+
+# Use 'ps' to list all processes, and then use 'grep' to filter lines containing "bash"
+# The third field in the output ( column 3) contains the PID of the process
+# The 'grep' command itself contains "bash" in its output, so we exclude it with 'grep -v grep'
+# Use 'awk' to print the PID from the third field
+ps aux | grep "bash" | grep -v grep | awk '{print $2}'
