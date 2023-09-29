@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# This script displays the PID of the current Bash shell and its own PID
+
+echo "Bash PID: $$"
+echo "Script PID: $BASHPID"
