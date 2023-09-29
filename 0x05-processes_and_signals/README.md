@@ -116,3 +116,104 @@ kill -18 6789
 --
 In this example, the kill command is used with the -19 option to send the SIGSTOP signal to the process with PID 6789, which suspends its execution. Later, you can send the SIGCONT signal with -18 to resume the process.
 
+
+How to use:
+-----------
+
+- ps
+- pgrep
+- pkill
+- kill
+- exit
+- trap
+-----------
+
+1.
+ps - Display Information About Processes:
+
+The ps command is used to display information about running processes. Here are some common options:
+    * ps aux: List all processes with detailed information.
+    * ps -ef: List all processes with detailed information (another format).
+    * ps -e | grep <process_name>: List processes by name.
+
+Example:
+
+bash
+==Code==
+
+ps aux | grep firefox
+-----------------------
+
+2.
+pgrep - Find Processes by Name:
+
+The pgrep command is used to find processes by name and return their PIDs.
+
+Example:
+
+bash
+==Code==
+
+pgrep firefox
+-----------------------
+
+3.
+pkill - Kill Processes by Name:
+
+The pkill command is used to send signals to and potentially terminate processes by name.
+
+Example:
+
+bash
+==Code==
+
+pkill firefox
+-----------------------
+
+4.
+kill - Send Signals to Processes:
+
+The kill command is used to send signals to processes. You can specify the process by its PID.
+
+Example:
+
+bash
+==Code==
+
+# Send the SIGTERM signal (default)
+kill 12345
+------------------------
+
+5.
+exit - Terminate a Shell Session:
+
+The exit command is used to terminate the current shell session or script.
+
+Example:
+
+bash
+==Code==
+
+exit
+---------------------------
+
+6.
+trap - Set Traps for Signals:
+
+The trap command is used to set traps for signals in shell scripts, allowing you to specify actions to be taken when a signal is received.
+
+Example:
+
+bash
+==Code==
+
+# Trap SIGINT (Ctrl+C) and perform a custom action
+trap 'echo "SIGINT received"' SIGINT
+
+# Run a long-running process
+sleep 100
+
+# When you press Ctrl+C, the custom action will be executed
+-------------------------------------------------------------
+
+These commands are powerful tools for managing processes and handling signals in a Unix-like environment. You can use them to monitor, control, and interact with running processes and scripts efficiently.
