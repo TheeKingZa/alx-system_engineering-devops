@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# This script displays a list of currently running processes with hierarchy
+
+# Use 'ps' to list all processes, display user-oriented format
+# -e: Select all processes
+# -o: User-oriented format
+# --forest: Show process hierarchy
+ps aux --forest
