@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# This script kills the 7-highlander process
+
+# Use 'pkill' to send a termination signal to the '7-highlander' script
+pkill -f "7-highlander"
