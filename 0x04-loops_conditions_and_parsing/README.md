@@ -167,4 +167,51 @@ bash
     if [ -e file.txt ]; then
         echo "file.txt exists."
     fi
+------------------------
+
+env (Environment):
+------------------------
+env:
+* env is a command in Unix-like operating systems that allows you to set or display environment variables.
+* Environment variables are key-value pairs that store information used by processes and applications.
+      They provide configuration and runtime data.
+* env is often used to run a command in a modified environment by setting specific variables or displaying
+      the current environment.
+
+cut:
+* cut is a command-line utility in Unix-like operating systems used to extract specific sections (columns)
+      from lines of text.
+* It is often used when dealing with text data that is structured in columns or fields, separated by a
+      delimiter like tabs or spaces.
+* cut allows you to specify which columns to extract and can be combined with other commands to process and
+      manipulate text data.
+
+for:
+* for is a control flow statement in Bash and other programming languages that allows you to create loops.
+* It is used to repeatedly execute a set of commands a specific number of times or for each item in a list
+      (e.g., files in a directory).
+* A typical for loop consists of an initialization, a condition, and an increment statement.
+
+while:
+* while is another control flow statement in Bash and many other programming languages.
+* It creates a loop that continues to execute a block of code as long as a specified condition is true.
+* while loops are used when you want to repeat a set of commands until a particular condition is no longer met.
+
+until:
+* until is similar to while in that it creates a loop in Bash and other languages.
+* However, it works in the opposite way. It continues to execute a block of code as long as a specified
+      condition is false.
+* until loops are used when you want to repeat a set of commands until a specific condition becomes true.
+
+if:
+* if is a conditional statement used in Bash and many other programming languages.
+* It allows you to test a condition and execute different sets of commands based on whether the condition is
+      true or false.
+* if statements are fundamental for creating branching logic in scripts and programs, enabling different
+      actions to be taken based on specific conditions.
+
 ==============================================================================
+
+
+
+
