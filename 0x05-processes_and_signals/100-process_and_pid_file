@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+# Bash script that performs various tasks with signals and a PID file.
+
+# Define the PID file path
+pid_file="/var/run/myscript.pid"
+
+# Function to handle cleanup and exit
+cleanup_and_exit() {
+    echo "Cleaning up and exiting..."
+    # Check if the PID file exists
+    if [ -e "$pid_file" ]; then
+        # Delete the PID file
+        rm "$pid_file"
+    fi
+    exit 0
+}
+
+# Register signal handlers
+trap 'echo "I hate the kill command"' SIGTERM
+trap 'echo "Y U no love me?!"' SIGINT
+trap 'cleanup_and_exit' SIGQUIT
+
+# Create the PID file with the current process ID
+echo "$$" > "$pid_file"
+
+# Display "To infinity and beyond" indefinitely
+while true; do
+    echo "To infinity and beyond"
+    sleep 1
+done
