@@ -21,7 +21,7 @@ trap 'echo "Y U no love me?!"' SIGINT
 trap 'cleanup_and_exit' SIGQUIT
 
 # Create the PID file with the current process ID
-echo "$$" > "$pid_file"
+echo "$$" | sudo tee "$pid_file"
 
 # Display "To infinity and beyond" indefinitely
 while true; do
