@@ -1,2 +1,5 @@
 #!/usr/bin/env ruby
-puts ARGV[0].scan(/hbt{2,5}n/).join
+# Check if command-line argument
+if ARGV[0] =~ /[^s]chool/
+    puts ARGV[0]
+end
