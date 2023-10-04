@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Use 'netstat' to display network-related information with program details.
+# - '-1' for a one-line output.
+# - '--program' to show associated programs and process IDs.
+netstat -1 --program

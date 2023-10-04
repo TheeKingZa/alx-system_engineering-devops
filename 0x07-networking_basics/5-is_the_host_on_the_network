@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# Ping's an IP address received as an argument 5 times.
+
+if [ $# -eq 0 ]
+# Check if the number of arguments passed to the script is equal to 0.
+then
+  echo "Usage: $0 {IP_ADDRESS}"
+  # If there are no arguments provided, print a usage message using the script name ($0).
+else
+  ping -c 5 "$1"
+  # If at least one argument is provided, execute the 'ping' command with the '-c 5' option
+  # to send 5 ICMP echo requests to the IP address specified as the first argument ($1).
+fi
