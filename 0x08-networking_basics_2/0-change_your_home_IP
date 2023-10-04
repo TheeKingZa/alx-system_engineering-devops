@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# This script configures DNS resolution for localhost and facebook.com.
+
+# Modify the hosts file to resolve localhost to 127.0.0.2
+sudo sed -i 's/127.0.0.1/127.0.0.2/g' /etc/hosts
+
+# Modify the hosts file to resolve facebook.com to 8.8.8.8
+sudo sed -i 's/facebook.com/8.8.8.8/g' /etc/hosts
+
