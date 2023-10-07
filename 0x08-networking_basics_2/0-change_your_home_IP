@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # This Bash script changes the IP address resolution for localhost and facebook.com on an Ubuntu server.
 
 # Define the new IP addresses for localhost and facebook.com
@@ -7,10 +7,10 @@ new_facebook_ip="8.8.8.8"
 
 # Update the hosts file to configure the IP addresses
 # Redirect localhost to the new IP
-echo " localhost" | sudo tee -a /etc/hosts
+sudo sed -i "s/^127.0.0.1.*localhost$/127.0.0.1\tlocalhost\n\tlocalhost/g" /etc/hosts
 
 # Redirect facebook.com to the new IP
-echo " facebook.com" | sudo tee -a /etc/hosts
+sudo sed -i "s/^.*facebook.com.*$/\tfacebook.com/g" /etc/hosts
 
 # Display a message to inform the user
 echo "IP addresses updated:"
@@ -19,5 +19,4 @@ echo "facebook.com now resolves to "
 
 # Note: Be cautious when using this script, as it can affect system behavior.
 # Make sure to revert these changes if necessary for proper system functioning.
-
 
