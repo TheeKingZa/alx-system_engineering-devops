@@ -1,9 +1,23 @@
-#!/usr/bin/env bash
-# This script configures DNS resolution for localhost and facebook.com.
+#!/bin/bash
+# This Bash script changes the IP address resolution for localhost and facebook.com on an Ubuntu server.
 
-# Modify the hosts file to resolve localhost to 127.0.0.2
-sudo sed -i 's/127.0.0.1/127.0.0.2/g' /etc/hosts
+# Define the new IP addresses for localhost and facebook.com
+new_localhost_ip="127.0.0.2"
+new_facebook_ip="8.8.8.8"
 
-# Modify the hosts file to resolve facebook.com to 8.8.8.8
-sudo sed -i 's/facebook.com/8.8.8.8/g' /etc/hosts
+# Update the hosts file to configure the IP addresses
+# Redirect localhost to the new IP
+echo " localhost" | sudo tee -a /etc/hosts
+
+# Redirect facebook.com to the new IP
+echo " facebook.com" | sudo tee -a /etc/hosts
+
+# Display a message to inform the user
+echo "IP addresses updated:"
+echo "localhost now resolves to "
+echo "facebook.com now resolves to "
+
+# Note: Be cautious when using this script, as it can affect system behavior.
+# Make sure to revert these changes if necessary for proper system functioning.
+
 
