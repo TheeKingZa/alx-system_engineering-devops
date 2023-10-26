@@ -175,7 +175,9 @@ Networks are a fundamental component of modern computing. They allow devices, su
 [TOC](#table-of-contents)
 -----------------------------------------------------------
 
-# DNS (Domain Name System)
+# DNS
+-----
+(Domain Name System)
 --------------------------
 
   The Domain Name System (DNS) is a critical part of the Internet that translates human-friendly domain names into IP addresses, making it easier to access websites and services. Here's a detailed overview of DNS:
