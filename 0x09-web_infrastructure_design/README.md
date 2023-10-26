@@ -10,61 +10,19 @@ Web Infrastructure Design
 - [DNS](#dns)
 - [Load Balancer](#load-balancer)
 - [Monitoring](#monitoring)
-- [What is a Database](#what-is-a-database)
+- [What is a Database?](#what-is-a-database?)
 - [Difference between a Web Server and an App Server](#difference-between-a-web-server-and-an-app-server)
 - [DNS Record Types](#dns-record-types)
 - [Single Point of Failure](#single-point-of-failure)
 - [Avoiding Downtime when Deploying New Code](#avoiding-downtime-when-deploying-new-code)
 - [High Availability Cluster (Active-Active/Active-Passive)](#high-availability-cluster)
-- [What is HTTPS](#what-is-https)
-- [What is a Firewall](#what-is-a-firewall)
+- [What is HTTPS?](#what-is-https?)
+- [What is a Firewall?](#what-is-a-firewall?)
+ 
+--------------------------------------------------------------------------
 
-## Network Basics
-This section will provide an introduction to fundamental network concepts.
-
-## Server
-Explore the concept of servers, their role, and how they provide services to clients.
-
-## Web Server
-Understand what a web server is and how it serves web pages to clients over HTTP.
-
-## DNS
-Learn about the Domain Name System (DNS) and how it translates domain names into IP addresses.
-
-## Load Balancer
-Discover load balancing and how it distributes network traffic to multiple servers for better performance.
-
-## Monitoring
-Discuss the importance of monitoring in network and server management.
-
-## What is a Database
-Explain the fundamentals of a database, its purpose, and how it stores and manages data.
-
-## Difference between a Web Server and an App Server
-Clarify the distinctions between web servers and application servers in the context of web applications.
-
-## DNS Record Types
-Explore various types of DNS records used to store specific information.
-
-## Single Point of Failure
-Define the concept of a single point of failure and its implications for system reliability.
-
-## Avoiding Downtime when Deploying New Code
-Discuss strategies for deploying new code without causing downtime.
-
-## High Availability Cluster
-Explain the concept of high availability clusters, both active-active and active-passive configurations.
-
-## What is HTTPS
-Introduce HTTPS, its role in securing web traffic, and the encryption of data.
-
-## What is a Firewall
-Define firewalls, their function, and how they protect networks from unauthorized access.
-
---------------------------------------------------------------------
-
-Network Basics
---------------
+# Network Basics
+----------------
 
 Networks are a fundamental component of modern computing. They allow devices, such as computers and servers, to communicate and share data. Here are some key concepts to help you understand network basics:
 
@@ -108,8 +66,8 @@ Networks are a fundamental component of modern computing. They allow devices, su
 
 --------------------------------------------------------------------
 
-Server
-------
+# Server
+--------
 
   A server is a crucial component in the world of computing and networking. It plays a central role in providing services and resources to clients. Here's a detailed overview of servers:
 
@@ -153,8 +111,8 @@ Server
 
 ---------------------------------------------------
 
-Web Server
-----------
+# Web Server
+------------
   A web server is a critical component in the delivery of web content over the Internet. Understanding how web servers work is essential for anyone involved in web development or network management. Here's an in-depth look at web servers:
 
 1. What is a Web Server?
@@ -212,8 +170,8 @@ Web Server
 
 -----------------------------------------------------------
 
-DNS (Domain Name System)
-------------------------
+# DNS (Domain Name System)
+--------------------------
 
   The Domain Name System (DNS) is a critical part of the Internet that translates human-friendly domain names into IP addresses, making it easier to access websites and services. Here's a detailed overview of DNS:
 
@@ -268,8 +226,8 @@ DNS (Domain Name System)
 
 ------------------------------------------------------------------
 
-Load Balancer
--------------
+# Load Balancer
+---------------
 
   A load balancer is a critical component in ensuring the availability, scalability, and performance of web services and applications. Here's a detailed overview of load balancers:
 
@@ -320,8 +278,8 @@ Load Balancer
 
 -------------------------------------------------------
 
-Monitoring
-----------
+# Monitoring
+------------
 
   Monitoring is a vital practice for ensuring the health, performance, and security of systems and networks. Here's an in-depth look at monitoring in the context of network and server management:
 
@@ -380,8 +338,8 @@ Monitoring
 
 ---------------------------------------------------------------------------
 
-What is a Database
-------------------
+# What is a Database?
+---------------------
 
   A database is a core element of data storage and management in modern computing. Understanding what a database is and how it functions is essential for anyone working with data. Here's an in-depth look at databases:
 
@@ -434,8 +392,8 @@ What is a Database
 
 ------------------------------------------------------------------------
 
-Difference between a Web Server and an App Server
--------------------------------------------------
+# Difference between a Web Server and an App Server
+----------------------------------------------------
 
   Understanding the distinction between web servers and application servers is crucial when building web applications. These two types of servers have distinct roles and functions. Here's an in-depth comparison of web servers and app servers:
 
@@ -469,8 +427,8 @@ In most web applications, both web servers and application servers work together
 
 -------------------------------------------------------------------------------
 
-DNS Record Types
-----------------
+# DNS Record Types
+------------------
 
   DNS (Domain Name System) records are essential components of domain management, as they provide various types of information about domain names. Here's an overview of common DNS record types:
 
@@ -524,8 +482,8 @@ DNS Record Types
 
 --------------------------------------------------------------------------
 
-Single Point of Failure
-------------------------
+# Single Point of Failure
+--------------------------
 
   A "Single Point of Failure" (SPoF) is a critical weakness in a system or network where the failure of a single component can lead to a complete system failure. Here's an in-depth look at single points of failure:
 
@@ -568,8 +526,8 @@ Downtime and service unavailability.
 
 -------------------------------------------------------------------------------
 
-How to Avoid Downtime When Deploying New Code
----------------------------------------------
+# How to Avoid Downtime When Deploying New Code
+------------------------------------------------
 
   Minimizing downtime during code deployments is essential for maintaining the availability and reliability of web services and applications. Here's an overview of strategies to avoid downtime when deploying new code:
 
@@ -622,13 +580,13 @@ How to Avoid Downtime When Deploying New Code
 
 ------------------------------------------------------------------------------
 
-High Availability Cluster (Active-Active/Active-Passive)
---------------------------------------------------------
+# High Availability Cluster (Active-Active/Active-Passive)
+----------------------------------------------------------
 
   High availability (HA) clusters are designed to ensure system or service availability by eliminating single points of failure. There are two common configurations for high availability clusters: active-active and active-passive.
 
-Active-Active Cluster:
-----------------------
+  # Active-Active Cluster:
+  ------------------------
 
 In an active-active cluster, all nodes or instances in the cluster are actively serving traffic or performing their designated tasks simultaneously. Here's an in-depth look at active-active clusters:
 
@@ -652,8 +610,8 @@ In an active-active cluster, all nodes or instances in the cluster are actively 
 
   * Active-active clusters can be more complex to set up and maintain than active-passive configurations. They may also require more resources and budget.
 
-Active-Passive Cluster:
------------------------
+  # Active-Passive Cluster:
+  -------------------------
 
   In an active-passive cluster, one node (or a subset of nodes) is active and  actively serving traffic or processing tasks, while the other nodes remain passive and only become active if the primary node fails. Here's an in-depth look at active-passive clusters:
 
@@ -682,7 +640,7 @@ Active-Passive Cluster:
 
 -------------------------------------------------------------------------
 
-What is HTTPS?
+# What is HTTPS?
 ---------------
 
   HTTPS, or Hypertext Transfer Protocol Secure, is a fundamental technology for secure and encrypted communication over the Internet. Here's a comprehensive overview of HTTPS:
@@ -752,8 +710,8 @@ HTTPS is a critical technology for ensuring the security and privacy of online c
 
 -------------------------------------------------------------------------------
 
-What is a Firewall?
--------------------
+# What is a Firewall?
+---------------------
 
   A firewall is a fundamental component of network security that acts as a barrier to control and monitor incoming and outgoing network traffic. Here's a comprehensive overview of firewalls:
 
