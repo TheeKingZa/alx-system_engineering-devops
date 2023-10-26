@@ -545,8 +545,8 @@ Downtime and service unavailability.
 
 -------------------------------------------------------------------------------
 
-# How to Avoid Downtime When Deploying New Code
-------------------------------------------------
+# Avoiding Downtime when Deploying New Code
+-------------------------------------------
 
   Minimizing downtime during code deployments is essential for maintaining the availability and reliability of web services and applications. Here's an overview of strategies to avoid downtime when deploying new code:
 
