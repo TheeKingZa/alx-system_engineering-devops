@@ -10,14 +10,14 @@ Web Infrastructure Design
 - [DNS](#dns)
 - [Load Balancer](#load-balancer)
 - [Monitoring](#monitoring)
-- [What is a Database?](#what-is-a-database?)
+- [What is a Database?](#what-is-a-database)
 - [Difference between a Web Server and an App Server](#difference-between-a-web-server-and-an-app-server)
 - [DNS Record Types](#dns-record-types)
 - [Single Point of Failure](#single-point-of-failure)
 - [Avoiding Downtime when Deploying New Code](#avoiding-downtime-when-deploying-new-code)
 - [High Availability Cluster (Active-Active/Active-Passive)](#high-availability-cluster)
-- [What is HTTPS?](#what-is-https?)
-- [What is a Firewall?](#what-is-a-firewall?)
+- [What is HTTPS?](#what-is-https)
+- [What is a Firewall?](#what-is-a-firewall)
  
 --------------------------------------------------------------------------
 
