@@ -65,7 +65,7 @@ Networks are a fundamental component of modern computing. They allow devices, su
   * Latency is the delay between sending and receiving data. Lower latency is desirable, especially for real-time applications like video conferencing and online gaming.
 
 
-[goto TOP](#table-of-contents)
+[TOC](#table-of-contents)
 --------------------------------------------------------------------
 
 # Server
@@ -110,6 +110,8 @@ Networks are a fundamental component of modern computing. They allow devices, su
 7. Server Redundancy and Load Balancing
 
   * To ensure high availability and reliability, redundant servers can be deployed. Load balancers distribute incoming network traffic across multiple servers to optimize performance and prevent overloading.
+
+[TOC](#table-of-contents)
 
 ---------------------------------------------------
 
@@ -170,6 +172,7 @@ Networks are a fundamental component of modern computing. They allow devices, su
 
   * Web servers generate logs that record various activities and errors. Monitoring and analyzing these logs help administrators maintain server performance and security.
 
+[TOC](#table-of-contents)
 -----------------------------------------------------------
 
 # DNS (Domain Name System)
@@ -226,6 +229,8 @@ Networks are a fundamental component of modern computing. They allow devices, su
 
   * DNS-related problems, such as DNS server unavailability or misconfigured DNS records, can cause website outages and connectivity issues.
 
+[TOC](#table-of-contents)
+
 ------------------------------------------------------------------
 
 # Load Balancer
@@ -277,6 +282,8 @@ Networks are a fundamental component of modern computing. They allow devices, su
 9. Load Balancer Configuration
 
   * Configuring a load balancer involves specifying backend servers, health check settings, and load balancing rules. It's essential to balance traffic effectively.
+
+[TOC](#table-of-contents)
 
 -------------------------------------------------------
 
@@ -338,6 +345,8 @@ Networks are a fundamental component of modern computing. They allow devices, su
 
   * Security monitoring tools focus on identifying and responding to security incidents, including intrusion detection and vulnerability assessments.
 
+[TOC](#table-of-contents)
+
 ---------------------------------------------------------------------------
 
 # What is a Database?
@@ -392,6 +401,8 @@ Networks are a fundamental component of modern computing. They allow devices, su
 
   * Databases must be optimized for performance and scalability to handle large volumes of data and user requests. Techniques like sharding and indexing are used for this purpose.
 
+[TOC](#table-of-contents)
+
 ------------------------------------------------------------------------
 
 # Difference between a Web Server and an App Server
@@ -426,6 +437,8 @@ Networks are a fundamental component of modern computing. They allow devices, su
     * Interactions: Application servers interact with databases, perform user authentication, and execute complex business logic.
 
 In most web applications, both web servers and application servers work together. The web server handles incoming requests, and when dynamic content is needed, it forwards those requests to the application server, which processes the request and generates the appropriate response. Understanding this division of labor is crucial for designing and maintaining efficient web applications.
+
+[TOC](#table-of-contents)
 
 -------------------------------------------------------------------------------
 
@@ -482,6 +495,8 @@ In most web applications, both web servers and application servers work together
 
   * CAA records specify which certificate authorities are authorized to issue SSL/TLS certificates for a domain. They enhance security by controlling who can issue certificates for your domain.
 
+[TOC](#table-of-contents)
+
 --------------------------------------------------------------------------
 
 # Single Point of Failure
@@ -525,6 +540,8 @@ Downtime and service unavailability.
 6. Business Continuity and Disaster Recovery (BCDR)
 
   * BCDR planning involves strategies for maintaining critical business functions during and after disasters, which includes minimizing SPoFs.
+
+[TOC](#table-of-contents)
 
 -------------------------------------------------------------------------------
 
@@ -579,6 +596,8 @@ Downtime and service unavailability.
 10. Communication
 
   * Inform users, stakeholders, and the operations team about upcoming deployments and expected downtime. Transparent communication can help manage expectations and reduce the impact of downtime.
+
+[TOC](#table-of-contents)
 
 ------------------------------------------------------------------------------
 
@@ -639,6 +658,8 @@ In an active-active cluster, all nodes or instances in the cluster are actively 
 
 
   The choice between active-active and active-passive cluster configurations depends on your specific requirements, budget, and complexity tolerance. Active-active clusters provide optimal resource utilization and are suitable for high-demand applications, while active-passive clusters offer a more cost-effective approach with simplified management.
+
+[TOC](#table-of-contents)
 
 -------------------------------------------------------------------------
 
@@ -710,6 +731,8 @@ Google and other search engines prioritize websites using HTTPS. HTTPS can boost
 
 HTTPS is a critical technology for ensuring the security and privacy of online communication. It's a standard practice for any website or web application that handles sensitive data.
 
+[TOC](#table-of-contents)
+
 -------------------------------------------------------------------------------
 
 # What is a Firewall?
@@ -779,4 +802,5 @@ HTTPS is a critical technology for ensuring the security and privacy of online c
 
 Firewalls are a fundamental tool for protecting networks and devices from unauthorized access, cyberattacks, and other security threats.
 
+[TOC](#table-of-contents)
 ===================================================================================
