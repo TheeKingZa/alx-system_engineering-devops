@@ -64,7 +64,8 @@ Networks are a fundamental component of modern computing. They allow devices, su
 
   * Latency is the delay between sending and receiving data. Lower latency is desirable, especially for real-time applications like video conferencing and online gaming.
 
-- [Table of Contents](#table-of-contents)
+
+[Top](#table-of-contents)
 --------------------------------------------------------------------
 
 # Server
