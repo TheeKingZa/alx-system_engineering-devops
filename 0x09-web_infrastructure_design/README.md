@@ -601,8 +601,10 @@ Downtime and service unavailability.
 
 ------------------------------------------------------------------------------
 
-# High Availability Cluster (Active-Active/Active-Passive)
-----------------------------------------------------------
+# High Availability Cluster
+---------------------------
+(Active-Active/Active-Passive)
+------------------------------
 
   High availability (HA) clusters are designed to ensure system or service availability by eliminating single points of failure. There are two common configurations for high availability clusters: active-active and active-passive.
 
