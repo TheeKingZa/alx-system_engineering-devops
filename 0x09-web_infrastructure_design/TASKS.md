@@ -9,7 +9,7 @@ This project is a collection of web infrastructure designs that could be impleme
 TASKS.
 ------
 
-* Simple web stack - details()
+* Simple web stack - details(README.md)
 * Distributed web infrastructure - details
 * Secured and monitored web infrastrucure - details
 * Scaled up web infrastructure - details
