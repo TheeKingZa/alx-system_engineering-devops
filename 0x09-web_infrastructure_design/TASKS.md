@@ -1,4 +1,4 @@
-Web Infrastructure Design.
+WEB INFRASTRUCTURE DESIGN.
 --------------------------
 [Author/s](AUTHORS.md)
 ----
@@ -17,4 +17,6 @@ TASKS.
 
 
 
-[tag/name](link_goes_here)
+I hope this pproject finds you in a GOOD PLACE!
+
+HAPPY CODING! 
