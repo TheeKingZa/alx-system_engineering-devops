@@ -1,34 +1,45 @@
-In "3-scale_up.md," we're discussing the distinction between application servers and web servers in a scalable web infrastructure. Here's an overview of the content:
+# Understanding Application Server vs. Web Server
 
-Title: Application Server vs. Web Server
+In the context of a specific infrastructure requirement, it's essential to differentiate between an application server and a web server and understand why they are added. 
 
-Contents:
+## Infrastructure Requirements
 
-Introduction
+### 1. Server
 
-Briefly introduce the topic of differentiating between web servers and application servers in a scalable web infrastructure.
-Web Server
+- A single server is included in the infrastructure. It serves as the underlying hardware on which various components of the application are hosted.
 
-Explain the role of a web server in a web infrastructure.
-Discuss why it's added to the architecture and how it handles web requests.
-Highlight the need for web servers in serving static content efficiently.
-Application Server
+### 2. Load-Balancer (HAproxy)
 
-Explain the role of an application server and why it's included in the infrastructure.
-Describe how it executes dynamic application code and processes complex business logic.
-Emphasize that application servers are responsible for generating dynamic content.
-Server Requirements
+- The load-balancer (HAproxy) is configured to work in a cluster with another load balancer. Load balancers distribute incoming network traffic across multiple servers, ensuring even distribution of requests and enhancing reliability and performance.
 
-State the requirement to add one server to the infrastructure.
-Mention the need for load balancing between servers for scalability and fault tolerance.
-Explain that splitting components (web server, application server, and database) onto their own servers enhances flexibility.
-HAproxy Load Balancer
+### 3. Split Components
 
-Introduce the HAproxy load balancer and the concept of clustering.
-Explain the purpose of load balancing in distributing traffic evenly across web and application servers.
-Mention that clustering ensures high availability and better performance.
-Conclusion
+- In this infrastructure, the components of the application, including the web server, application server, and database, are separated onto their own dedicated servers. This separation provides flexibility, scalability, and isolation between different layers of the application.
 
-Summarize the importance of understanding the distinct roles of web and application servers in a scalable infrastructure.
-Emphasize that splitting components and using load balancing are key strategies for scaling up web applications.
-The document guides readers through the roles of web and application servers, the requirements for adding servers, and the benefits of load balancing in a scalable web infrastructure. It's designed to enhance the reader's understanding of these components and their significance in building robust web applications
+## Specifics About the Infrastructure
+
+- **Web Server:**
+
+  - A web server, such as Nginx or Apache, is responsible for handling HTTP requests and serving static web content, like HTML, CSS, and images, to users' web browsers.
+  
+  - The web server's primary role is to respond to user requests with pre-built web pages and files. It handles basic HTTP processing and serves as the entry point for incoming requests.
+
+  - It's added to the infrastructure to efficiently manage and serve web content while leaving more complex processing to the application server.
+
+- **Application Server:**
+
+  - An application server, often running frameworks like Ruby on Rails, Django, or Express.js, is responsible for executing application logic, processing dynamic requests, and generating content on the fly.
+  
+  - Unlike the web server, the application server can process data, execute code, interact with databases, and generate personalized responses for each user request.
+
+  - The application server is added to manage complex application logic, making it possible to create interactive, dynamic web applications.
+
+## Why They Are Added
+
+- The web server is added to efficiently serve static content and handle initial HTTP requests. It acts as a gateway, routing requests to the appropriate components based on URL paths.
+
+- The application server is added to execute application-specific code, process user inputs, and interact with databases. It handles dynamic content generation and application logic, serving as the core engine of the application.
+
+By separating the responsibilities of these servers, the infrastructure becomes more modular, scalable, and maintainable. The load balancer ensures that incoming traffic is distributed evenly to multiple instances of these servers for high availability and performance.
+
+Understanding the roles and differences between web servers and application servers is essential in designing a robust and efficient web application infrastructure.
