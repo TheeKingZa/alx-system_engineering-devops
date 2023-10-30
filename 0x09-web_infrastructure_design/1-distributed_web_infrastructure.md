@@ -1,3 +1,7 @@
+[Readme](TASKS.md)
+-----
+
+
 # Building a Three-Server Distributed Web Infrastructure
 
 In this document, we will explore a more robust web infrastructure designed to host the website www.foobar.com. This infrastructure includes two servers, a web server, an application server, a load balancer (HAproxy), a set of application files, and a database (MySQL).
