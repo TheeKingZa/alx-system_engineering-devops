@@ -48,3 +48,10 @@ In this document, we will design a robust and secure web infrastructure that hos
 
 In summary, this secure and monitored infrastructure enhances security, performance, and availability. However, it still faces potential issues related to SSL termination, database redundancy, and the need for failover mechanisms in case of component failure.
 
+
+
+
+------
+[Back](2-secured_and_monitored_web_infrastructure.md)
+------
+[Next](3-scale_up.md)
