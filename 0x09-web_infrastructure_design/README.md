@@ -136,11 +136,11 @@ Networks are a fundamental component of modern computing. They allow devices, su
 4. Common Web Servers
 
   * There are several web server software options, with some of the most popular ones being:
-      -Apache HTTP Server
-      - ## Nginx
-      - Microsoft Internet Information Services (IIS)
-      - LiteSpeed
-      - Caddy
+    # Apache HTTP Server
+    # Nginx
+    # Microsoft Internet Information Services (IIS)
+    # LiteSpeed
+    # Caddy
 
   *Each web server software has its own features and configurations, but the fundamental principles of serving web content remain the same.
 
