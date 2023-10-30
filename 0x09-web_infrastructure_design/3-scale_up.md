@@ -43,3 +43,8 @@ In the context of a specific infrastructure requirement, it's essential to diffe
 By separating the responsibilities of these servers, the infrastructure becomes more modular, scalable, and maintainable. The load balancer ensures that incoming traffic is distributed evenly to multiple instances of these servers for high availability and performance.
 
 Understanding the roles and differences between web servers and application servers is essential in designing a robust and efficient web application infrastructure.
+
+
+------
+[END](TASKS.md)
+------
