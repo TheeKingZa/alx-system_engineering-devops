@@ -3,7 +3,7 @@
 In this document, we will design a robust and secure web infrastructure that hosts the website www.foobar.com. This infrastructure comprises three servers, firewalls, SSL certificate, and monitoring clients.
 
 ----
-[Diagram](0-simple_web_stack.jpg)|-----------+
+---| [Diagram](2-secured_and_monitored_web_infrastracture.jpg) |-----------+
 ----
 
 
