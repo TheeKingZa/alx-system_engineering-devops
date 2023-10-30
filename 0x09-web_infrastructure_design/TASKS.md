@@ -8,11 +8,11 @@ This project is a collection of web infrastructure designs that could be impleme
 
 TASKS.
 ------
-* Readme [read more](README.md)
-* Simple web stack - [details](0-simple_web_stack.md)
-* Distributed web infrastructure - [details](1-distributed_web_infrastructure.md)
-* Secured and monitored web infrastrucure - [details](2-secured_and_monitored_web_infrastructure.md)
-* Scaled up web infrastructure - [details](3-scale_up.md)
+* [README](README.md)
+* [Simple web stack](0-simple_web_stack.md)
+* [Distributed web infrastructure](1-distributed_web_infrastructure.md)
+* [Secured and monitored web infrastrucure](2-secured_and_monitored_web_infrastructure.md)
+* [Scaled up web infrastructure](3-scale_up.md)
 
 
 
