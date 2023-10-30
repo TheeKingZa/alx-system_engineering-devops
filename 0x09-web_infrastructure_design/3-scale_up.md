@@ -2,6 +2,11 @@
 
 In the context of a specific infrastructure requirement, it's essential to differentiate between an application server and a web server and understand why they are added. 
 
+----
+[Diagram](3-scale_up.jpg)|-----------+
+----
+
+
 ## Infrastructure Requirements
 
 ### 1. Server
