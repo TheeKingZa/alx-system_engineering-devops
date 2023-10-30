@@ -1,6 +1,6 @@
 Web Infrastructure Design.
 --------------------------
-[Author/s](AUTHORS)
+[Author/s](AUTHORS.md)
 ----
 
 
