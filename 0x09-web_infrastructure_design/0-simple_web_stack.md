@@ -4,7 +4,7 @@ In this document, we will explore the components and specifics of a simple web i
 
 ## Infrastructure Components
 
-### 1. Server
+### 1. [Server](server)
 
 A server is a physical or virtual machine that hosts the web application. It is the central component responsible for processing and responding to user requests.
 
