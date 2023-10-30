@@ -1,5 +1,5 @@
 # Understanding a Simple Web Infrastructure
-
+--
 In this document, we will explore the components and specifics of a simple web infrastructure, including its roles and potential issues. This infrastructure typically consists of a single server with a LAMP (Linux, Apache, MySQL, PHP/Python/Perl) stack.
 
 ## Infrastructure Components
@@ -52,3 +52,8 @@ This simple web infrastructure consists of essential components like the server,
 
 Understanding these components and their roles is crucial for building reliable web applications and addressing potential problems in the infrastructure.
 
+
+
+------
+[Next](1-distributed_web_infrastructure.md)
+------
