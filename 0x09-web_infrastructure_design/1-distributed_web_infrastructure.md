@@ -58,3 +58,10 @@ In this document, we will explore a more robust web infrastructure designed to h
 
 In summary, this three-server distributed web infrastructure improves redundancy, load distribution, and fault tolerance. However, it still faces issues related to potential SPOFs, security vulnerabilities, and the absence of a monitoring system. Addressing these concerns is crucial to ensure the reliability and security of the infrastructure.
 
+
+
+
+------
+[Back](0-simple_web_stack.md)
+------
+[Next](2-secured_and_monitored_web_infrastructure.md)
