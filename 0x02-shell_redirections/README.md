@@ -2,7 +2,7 @@
 [<]() 0x02 [>]()
 ----
 
-In this README, we will explore several important shell commands frequently used in Unix-like operating systems. Each command serves a distinct purpose and is crucial for various tasks.
+    In this README, we will explore several important shell commands frequently used in Unix-like operating systems. Each command serves a distinct purpose and is crucial for various tasks.
 
 # echo
     Description: The echo command is used to display text or variables on the terminal.
@@ -14,7 +14,9 @@ In this README, we will explore several important shell commands frequently used
 
 [Manual Page](https://man7.org/linux/man-pages/man1/echo.1.html)
 
+[^](#shell-directions-and-filters)
 
+---
 # cat
     Description: The cat command is used to concatenate and display the content of files.
 
@@ -25,7 +27,9 @@ In this README, we will explore several important shell commands frequently used
 
 [Manual Page](https://man7.org/linux/man-pages/man1/cat.1.html)
 
+[^](#shell-directions-and-filters)
 
+---
 # head
     Description: The head command displays the beginning lines of a file.
 
@@ -35,7 +39,9 @@ In this README, we will explore several important shell commands frequently used
         head -n 5 file.txt
 [Manual Page](https://man7.org/linux/man-pages/man1/head.1.html)
 
+[^](#shell-directions-and-filters)
 
+---
 # tail
     Description: The tail command displays the end lines of a file.
 
@@ -46,7 +52,9 @@ In this README, we will explore several important shell commands frequently used
         
 [Manual Page](https://man7.org/linux/man-pages/man1/tail.1.html)
 
---------------------------------------------------------------------------------------------------
+[^](#shell-directions-and-filters)
+
+---
 
 # find
     Description: The find command is used to search for files and directories based on specified criteria.
@@ -58,7 +66,9 @@ In this README, we will explore several important shell commands frequently used
         
 [Manual Page](https://man7.org/linux/man-pages/man1/find.1.html)
 
---------------------------------------------------------------------------------------------------
+[^](#shell-directions-and-filters)
+
+---
 
 # wc
     Description: The wc command counts lines, words, and characters in a file.
@@ -70,7 +80,9 @@ In this README, we will explore several important shell commands frequently used
 
 [Manual Page](https://man7.org/linux/man-pages/man1/wc.1.html)
 
---------------------------------------------------------------------------------------------------
+[^](#shell-directions-and-filters)
+
+---
 
 # sort
     Description: The sort command is used to sort lines of text files.
@@ -82,7 +94,9 @@ In this README, we will explore several important shell commands frequently used
 
 [Manual Page](https://man7.org/linux/man-pages/man1/sort.1.html)
 
---------------------------------------------------------------------------------------------------
+[^](#shell-directions-and-filters)
+
+---
 
 # uniq
     Description: The uniq command removes duplicate lines from a sorted file.
@@ -93,7 +107,9 @@ In this README, we will explore several important shell commands frequently used
         sort file.txt | uniq
 [Manual Page](https://man7.org/linux/man-pages/man1/uniq.1.html)
 
---------------------------------------------------------------------------------------------------
+[^](#shell-directions-and-filters)
+
+---
 
 # grep
     Description: The grep command searches text using patterns and regular expressions.
@@ -104,7 +120,9 @@ In this README, we will explore several important shell commands frequently used
         grep "pattern" file.txt
 [Manual Page](https://man7.org/linux/man-pages/man1/grep.1.html)
 
---------------------------------------------------------------------------------------------------
+[^](#shell-directions-and-filters)
+
+---
 
 # tr
     Description: The tr command is used for character-level translation or deletion.
@@ -115,7 +133,9 @@ In this README, we will explore several important shell commands frequently used
         echo "Hello" | tr 'a-z' 'A-Z'
 [Manual Page](https://man7.org/linux/man-pages/man1/tr.1.html)
 
---------------------------------------------------------------------------------------------------
+[^](#shell-directions-and-filters)
+
+---
 
 # rev
     Description: The rev command reverses lines character-wise.
@@ -126,7 +146,9 @@ In this README, we will explore several important shell commands frequently used
         echo "Hello" | rev
 [Manual Page](https://man7.org/linux/man-pages/man1/rev.1.html)
 
---------------------------------------------------------------------------------------------------
+[^](#shell-directions-and-filters)
+
+---
 
 # cut
     Description: The cut command is used to remove sections from lines of files.
@@ -138,7 +160,9 @@ In this README, we will explore several important shell commands frequently used
 
 [Manual Page](https://man7.org/linux/man-pages/man1/cut.1.html)
 
---------------------------------------------------------------------------------------------------
+[^](#shell-directions-and-filters)
+
+---
 
 # passwd (5)
     Description:
@@ -151,6 +175,9 @@ In this README, we will explore several important shell commands frequently used
 
 [Manual Page](https://man7.org/linux/man-pages/man1/passwd.5.html)
 
+[^](#shell-directions-and-filters)
+
+---
 # Shell, I/O Redirection, and Special Characters
     Commands and Their Functions:
 
@@ -164,6 +191,9 @@ In this README, we will explore several important shell commands frequently used
         * tr: Performs character-level translation or deletion.
         * cat: Concatenates and displays the content of files.
 
+[^](#shell-directions-and-filters)
+
+---
 # I/O Redirection:
     *  Redirect Standard Output to a File: Use > to redirect standard output to a file.
 
@@ -182,6 +212,9 @@ In this README, we will explore several important shell commands frequently used
 
     *  Combine Commands and Filters with Redirections: You can combine multiple commands and filters using redirections to create complex data processing pipelines.
 
+[^](#shell-directions-and-filters)
+
+---
 # Special Characters:
     * White Spaces
         ("    "):
