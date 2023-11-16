@@ -1,5 +1,4 @@
 # System Engineering Development
----
 # [ALX](https://www.alxafrica.com)
 # Author: [Pule Mathikhha](https://pulemathikha.wordpress.com)
 
