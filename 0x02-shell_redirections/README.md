@@ -1,46 +1,40 @@
-Shell, Directions and Filters
------------------------------
-0x02
+# Shell, Directions and Filters
+[<]() 0x02 [>]()
 ----
 
 In this README, we will explore several important shell commands frequently used in Unix-like operating systems. Each command serves a distinct purpose and is crucial for various tasks.
---------------------------------------------------------------------------------------------------
 
-1. echo
-Description: The echo command is used to display text or variables on the terminal.
+# echo
+    Description: The echo command is used to display text or variables on the terminal.
 
-Usage:
+    Usage:
 
-bash
-==Code==
-echo "Hello, world!"
-Manual Page< https://man7.org/linux/man-pages/man1/echo.1.html >
+    bashCode
+        echo "Hello, world!"
 
---------------------------------------------------------------------------------------------------
+[Manual Page](https://man7.org/linux/man-pages/man1/echo.1.html)
 
-2. cat
-Description: The cat command is used to concatenate and display the content of files.
 
-Usage:
+# cat
+    Description: The cat command is used to concatenate and display the content of files.
 
-bash
-==Code==
-cat file.txt
-Manual Page< https://man7.org/linux/man-pages/man1/cat.1.html >
+    Usage:
 
---------------------------------------------------------------------------------------------------
+    bashCode==
+        cat file.txt
 
-3. head
-Description: The head command displays the beginning lines of a file.
+[Manual Page](https://man7.org/linux/man-pages/man1/cat.1.html)
 
-Usage:
 
-bash
-==Code==
-head -n 5 file.txt
-Manual Page< https://man7.org/linux/man-pages/man1/head.1.html >
+# head
+    Description: The head command displays the beginning lines of a file.
 
---------------------------------------------------------------------------------------------------
+    Usage:
+
+    bashCode
+        head -n 5 file.txt
+[Manual Page](https://man7.org/linux/man-pages/man1/head.1.html)
+
 
 4. tail
 Description: The tail command displays the end lines of a file.
@@ -150,77 +144,80 @@ Manual Page< https://man7.org/linux/man-pages/man1/cut.1.html >
 
 --------------------------------------------------------------------------------------------------
 
-13. passwd (5)
-Description: The passwd (5) manual page contains information about the file format and conventions of the /etc/passwd file.
+# passwd (5)
+    Description:
+    The passwd (5) manual page contains information about the file format and conventions of the /etc/passwd file.
 
-Usage:
+    Usage:
 
-bash
-==Code==
-man 5 passwd
-Manual Page< https://man7.org/linux/man-pages/man1/passwd.5.html >
+    bashCode
+        man 5 passwd
 
---------------------------------------------------------------------------------------------------
+[Manual Page](https://man7.org/linux/man-pages/man1/passwd.5.html)
 
-Shell, I/O Redirection, and Special Characters
-Commands and Their Functions:
+# Shell, I/O Redirection, and Special Characters
+    Commands and Their Functions:
 
-* head: Displays the beginning lines of a file.
-* tail: Displays the end lines of a file.
-* find: Searches for files and directories based on specified criteria.
-* wc: Counts lines, words, and characters in a file.
-* sort: Sorts lines of text files.
-* uniq: Removes duplicate lines from a sorted file.
-* grep: Searches text using patterns and regular expressions.
-* tr: Performs character-level translation or deletion.
-* cat: Concatenates and displays the content of files.
+        * head: Displays the beginning lines of a file.
+        * tail: Displays the end lines of a file.
+        * find: Searches for files and directories based on specified criteria.
+        * wc: Counts lines, words, and characters in a file.
+        * sort: Sorts lines of text files.
+        * uniq: Removes duplicate lines from a sorted file.
+        * grep: Searches text using patterns and regular expressions.
+        * tr: Performs character-level translation or deletion.
+        * cat: Concatenates and displays the content of files.
 
---------------------------------------------------------------------------------------------------
-I/O Redirection:
---------------------------------------------------------------------------------------------------
-*  Redirect Standard Output to a File: Use > to redirect standard output to a file.
+# I/O Redirection:
+    *  Redirect Standard Output to a File: Use > to redirect standard output to a file.
 
-bash
-==Code==
-command > output.txt
---------------------------------------------------------------------------------------------------
-*  Get Standard Input from a File: Use < to get standard input from a file.
+        bashCode
+            command > output.txt
 
-bash
-==Code==
-command < input.txt
---------------------------------------------------------------------------------------------------
+    *  Get Standard Input from a File: Use < to get standard input from a file.
 
-*  Send Output to Another Program: Use | (pipe) to send the output from one program to the input of another program.
+        bashCode
+            command < input.txt
 
-bash
-==Code==
-command1 | command2
+    *  Send Output to Another Program: Use | (pipe) to send the output from one program to the input of another program.
 
---------------------------------------------------------------------------------------------------
+        bashCode
+        command1 | command2
 
-*  Combine Commands and Filters with Redirections: You can combine multiple commands and filters using redirections to create complex data processing pipelines.
+    *  Combine Commands and Filters with Redirections: You can combine multiple commands and filters using redirections to create complex data processing pipelines.
 
---------------------------------------------------------------------------------------------------
-Special Characters:
+# Special Characters:
+    * White Spaces
+        ("    "):
+            Spaces and tabs are used for separating commands and arguments. Quotes can be used to preserve spaces in arguments.
 
-* White Spaces: Spaces and tabs are used for separating commands and arguments. Quotes can be used to preserve spaces in arguments.
+    * Single Quotes
+        (''):
+            Enclosed text is treated as a literal. No variable or command expansion occurs.
 
-* Single Quotes (''): Enclosed text is treated as a literal. No variable or command expansion occurs.
+    * Double Quotes
+        (""):
+            Enclosed text allows variable and command substitution. Expansions occur within double quotes.
 
-* Double Quotes (""): Enclosed text allows variable and command substitution. Expansions occur within double quotes.
+    * Backslash
+        (\):
+            Used to escape special characters, making them literal. For example, \n represents a newline character.
 
-* Backslash (): Used to escape special characters, making them literal. For example, \n represents a newline character.
+    * Comment
+        (#):
+            Anything after a # is treated as a comment and is not executed.
 
-* Comment (#): Anything after a # is treated as a comment and is not executed.
+    * Pipe
+        (|):
+            Connects the output of one command to the input of another, enabling data flow between commands.
 
-* Pipe (|): Connects the output of one command to the input of another, enabling data flow between commands.
+    * Command Separator
+        (;):
+            Separates multiple commands on a single line. They are executed sequentially.
 
-* Command Separator (;): Separates multiple commands on a single line. They are executed sequentially.
+    * Tilde
+        (~):
+            Represents the user's home directory, e.g., ~username refers to the home directory of the specified user.
 
-* Tilde (~): Represents the user's home directory, e.g., ~username refers to the home directory of the specified user.
 
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
---------------------------------------------------------------------------------------------------
+[^]()
