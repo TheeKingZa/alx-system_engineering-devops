@@ -1,5 +1,5 @@
 # Shell, Directions and Filters
-[<]() 0x02 [>]()
+[<](https://github.com/TheeKingZa/alx-system_engineering-devops/blob/master/0x01-shell_permissions/README.md) 0x02 [>](https://github.com/TheeKingZa/alx-system_engineering-devops/blob/master/0x03-shell_variables_expansions/README.md)
 ----
 
     In this README, we will explore several important shell commands frequently used in Unix-like operating systems. Each command serves a distinct purpose and is crucial for various tasks.
