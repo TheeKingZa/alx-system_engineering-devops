@@ -1,10 +1,8 @@
 # System Engineering Development
-# Higher Level Programming
 ---
 # [ALX](https://www.alxafrica.com)
 # Author: [Pule Mathikhha](https://pulemathikha.wordpress.com)
 
----
 * Shell
        * [Shell Basics](https://github.com/TheeKingZa/alx-system_engineering-devops/tree/master/0x00-shell_basics/README.md)
        * [shell Permissions](https://github.com/TheeKingZa/alx-system_engineering-devops/tree/master/0x01-shell_permissions/README.md)
