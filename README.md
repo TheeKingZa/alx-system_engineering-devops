@@ -17,7 +17,13 @@
      * [Web Infrastructure Design](https://github.com/TheeKingZa/alx-system_engineering-devops/tree/master/0x09-web_infrastructure_design/README.md)
 
 
-
+* Other projects
+     * [Fix_My_Code_Challenge](https://github.com/TheeKingZa/fix_my_code_challenge/tree/master//README.md)
+     * [AirBnB_clone]()
+     * [alx-low_level_programming]()
+     * [binary_trees]()
+     * [Monty]()
+     * [sorting_algorithms]()
 
 
 
