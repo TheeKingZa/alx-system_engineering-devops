@@ -36,111 +36,107 @@ In this README, we will explore several important shell commands frequently used
 [Manual Page](https://man7.org/linux/man-pages/man1/head.1.html)
 
 
-4. tail
-Description: The tail command displays the end lines of a file.
+# tail
+    Description: The tail command displays the end lines of a file.
 
-Usage:
+    Usage:
 
-bash
-==Code==
-tail -n 10 file.txt
-Manual Page< https://man7.org/linux/man-pages/man1/tail.1.html >
-
---------------------------------------------------------------------------------------------------
-
-5. find
-Description: The find command is used to search for files and directories based on specified criteria.
-
-Usage:
-
-bash
-==Code==
-find /path/to/search -name "*.txt"
-Manual Page< https://man7.org/linux/man-pages/man1/find.1.html >
+    bashCode
+        tail -n 10 file.txt
+        
+[Manual Page](https://man7.org/linux/man-pages/man1/tail.1.html)
 
 --------------------------------------------------------------------------------------------------
 
-6. wc
-Description: The wc command counts lines, words, and characters in a file.
+# find
+    Description: The find command is used to search for files and directories based on specified criteria.
 
-Usage:
+    Usage:
 
-bash
-==Code==
-wc -l file.txt
-Manual Page< https://man7.org/linux/man-pages/man1/wc.1.html >
-
---------------------------------------------------------------------------------------------------
-
-7. sort
-Description: The sort command is used to sort lines of text files.
-
-Usage:
-
-bash
-==Code==
-sort file.txt
-Manual Page< https://man7.org/linux/man-pages/man1/sort.1.html >
+    bashCode
+        find /path/to/search -name "*.txt"
+        
+[Manual Page](https://man7.org/linux/man-pages/man1/find.1.html)
 
 --------------------------------------------------------------------------------------------------
 
-8. uniq
-Description: The uniq command removes duplicate lines from a sorted file.
+# wc
+    Description: The wc command counts lines, words, and characters in a file.
 
-Usage:
+    Usage:
 
-bash
-==Code==
-sort file.txt | uniq
-Manual Page< https://man7.org/linux/man-pages/man1/uniq.1.html>
+    bashCode
+        wc -l file.txt
 
---------------------------------------------------------------------------------------------------
-
-9. grep
-Description: The grep command searches text using patterns and regular expressions.
-
-Usage:
-
-bash
-==Code==
-grep "pattern" file.txt
-Manual Page< https://man7.org/linux/man-pages/man1/grep.1.html >
+[Manual Page](https://man7.org/linux/man-pages/man1/wc.1.html)
 
 --------------------------------------------------------------------------------------------------
 
-10. tr
-Description: The tr command is used for character-level translation or deletion.
+# sort
+    Description: The sort command is used to sort lines of text files.
 
-Usage:
+    Usage:
 
-bash
-==Code==
-echo "Hello" | tr 'a-z' 'A-Z'
-Manual Page< https://man7.org/linux/man-pages/man1/tr.1.html >
+    bashCode
+        sort file.txt
 
---------------------------------------------------------------------------------------------------
-
-11. rev
-Description: The rev command reverses lines character-wise.
-
-Usage:
-
-bash
-==Code==
-echo "Hello" | rev
-Manual Page< https://man7.org/linux/man-pages/man1/rev.1.html >
+[Manual Page](https://man7.org/linux/man-pages/man1/sort.1.html)
 
 --------------------------------------------------------------------------------------------------
 
-12. cut
-Description: The cut command is used to remove sections from lines of files.
+# uniq
+    Description: The uniq command removes duplicate lines from a sorted file.
 
-Usage:
+    Usage:
 
-bash
-==Code==
-cut -d',' -f2 file.csv
-Manual Page< https://man7.org/linux/man-pages/man1/cut.1.html >
+    bashCode
+        sort file.txt | uniq
+[Manual Page](https://man7.org/linux/man-pages/man1/uniq.1.html)
+
+--------------------------------------------------------------------------------------------------
+
+# grep
+    Description: The grep command searches text using patterns and regular expressions.
+
+    Usage:
+
+    bashCode
+        grep "pattern" file.txt
+[Manual Page](https://man7.org/linux/man-pages/man1/grep.1.html)
+
+--------------------------------------------------------------------------------------------------
+
+# tr
+    Description: The tr command is used for character-level translation or deletion.
+
+    Usage:
+
+    bashCode
+        echo "Hello" | tr 'a-z' 'A-Z'
+[Manual Page](https://man7.org/linux/man-pages/man1/tr.1.html)
+
+--------------------------------------------------------------------------------------------------
+
+# rev
+    Description: The rev command reverses lines character-wise.
+
+    Usage:
+
+    bashCode
+        echo "Hello" | rev
+[Manual Page](https://man7.org/linux/man-pages/man1/rev.1.html)
+
+--------------------------------------------------------------------------------------------------
+
+# cut
+    Description: The cut command is used to remove sections from lines of files.
+
+    Usage:
+
+    bashCode
+        cut -d',' -f2 file.csv
+
+[Manual Page](https://man7.org/linux/man-pages/man1/cut.1.html)
 
 --------------------------------------------------------------------------------------------------
 
@@ -220,4 +216,4 @@ Manual Page< https://man7.org/linux/man-pages/man1/cut.1.html >
             Represents the user's home directory, e.g., ~username refers to the home directory of the specified user.
 
 
-[^]()
+[^](#shell-directions-and-filters)
