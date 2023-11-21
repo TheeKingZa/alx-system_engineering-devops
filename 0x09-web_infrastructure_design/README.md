@@ -2,7 +2,7 @@ Web Infrastructure Design
 --------------------------
 [<](https://github.com/TheeKingZa/alx-system_engineering-devops/tree/master/0x08-networking_basics_2) 0x09 [Tasks](TASKS.md) [>](https://github.com/TheeKingZa/alx-system_engineering-devops/tree/master/attack_is_the_best_defense)
 
-# Table of Contents
+# NEED TO KNOW?
 - [Network Basics](#network-basics)
 - [Server](#server)
 - [Web Server](#web-server)
@@ -64,12 +64,9 @@ Networks are a fundamental component of modern computing. They allow devices, su
   * Latency is the delay between sending and receiving data. Lower latency is desirable, especially for real-time applications like video conferencing and online gaming.
 
 
-[TOC](#table-of-contents)
---------------------------------------------------------------------
+[^](#need-to-know)
 
 # Server
---------
-
   A server is a crucial component in the world of computing and networking. It plays a central role in providing services and resources to clients. Here's a detailed overview of servers:
 
 1. What is a Server?
@@ -110,12 +107,9 @@ Networks are a fundamental component of modern computing. They allow devices, su
 
   * To ensure high availability and reliability, redundant servers can be deployed. Load balancers distribute incoming network traffic across multiple servers to optimize performance and prevent overloading.
 
-[TOC](#table-of-contents)
-
----------------------------------------------------
+[^](#need-to-know)
 
 # Web Server
-------------
   A web server is a critical component in the delivery of web content over the Internet. Understanding how web servers work is essential for anyone involved in web development or network management. Here's an in-depth look at web servers:
 
 1. What is a Web Server?
@@ -171,14 +165,10 @@ Networks are a fundamental component of modern computing. They allow devices, su
 
   * Web servers generate logs that record various activities and errors. Monitoring and analyzing these logs help administrators maintain server performance and security.
 
-[TOC](#table-of-contents)
------------------------------------------------------------
+[^](#need-to-know)
 
 # DNS
------
 (Domain Name System)
---------------------------
-
   The Domain Name System (DNS) is a critical part of the Internet that translates human-friendly domain names into IP addresses, making it easier to access websites and services. Here's a detailed overview of DNS:
 
 1. What is DNS?
@@ -230,13 +220,9 @@ Networks are a fundamental component of modern computing. They allow devices, su
 
   * DNS-related problems, such as DNS server unavailability or misconfigured DNS records, can cause website outages and connectivity issues.
 
-[TOC](#table-of-contents)
-
-------------------------------------------------------------------
+[^](#need-to-know)
 
 # Load Balancer
----------------
-
   A load balancer is a critical component in ensuring the availability, scalability, and performance of web services and applications. Here's a detailed overview of load balancers:
 
 1. What is a Load Balancer?
@@ -284,13 +270,9 @@ Networks are a fundamental component of modern computing. They allow devices, su
 
   * Configuring a load balancer involves specifying backend servers, health check settings, and load balancing rules. It's essential to balance traffic effectively.
 
-[TOC](#table-of-contents)
-
--------------------------------------------------------
+[^](#need-to-know)
 
 # Monitoring
-------------
-
   Monitoring is a vital practice for ensuring the health, performance, and security of systems and networks. Here's an in-depth look at monitoring in the context of network and server management:
 
 1. What is Monitoring?
@@ -346,13 +328,9 @@ Networks are a fundamental component of modern computing. They allow devices, su
 
   * Security monitoring tools focus on identifying and responding to security incidents, including intrusion detection and vulnerability assessments.
 
-[TOC](#table-of-contents)
-
----------------------------------------------------------------------------
+[^](#need-to-know)
 
 # What is a Database?
----------------------
-
   A database is a core element of data storage and management in modern computing. Understanding what a database is and how it functions is essential for anyone working with data. Here's an in-depth look at databases:
 
 1. What is a Database?
@@ -402,13 +380,9 @@ Networks are a fundamental component of modern computing. They allow devices, su
 
   * Databases must be optimized for performance and scalability to handle large volumes of data and user requests. Techniques like sharding and indexing are used for this purpose.
 
-[TOC](#table-of-contents)
-
-------------------------------------------------------------------------
+[^](#need-to-know)
 
 # Difference between a Web Server and an App Server
-----------------------------------------------------
-
   Understanding the distinction between web servers and application servers is crucial when building web applications. These two types of servers have distinct roles and functions. Here's an in-depth comparison of web servers and app servers:
 
 1. Web Server
@@ -439,13 +413,9 @@ Networks are a fundamental component of modern computing. They allow devices, su
 
 In most web applications, both web servers and application servers work together. The web server handles incoming requests, and when dynamic content is needed, it forwards those requests to the application server, which processes the request and generates the appropriate response. Understanding this division of labor is crucial for designing and maintaining efficient web applications.
 
-[TOC](#table-of-contents)
-
--------------------------------------------------------------------------------
+[^](#need-to-know)
 
 # DNS Record Types
-------------------
-
   DNS (Domain Name System) records are essential components of domain management, as they provide various types of information about domain names. Here's an overview of common DNS record types:
 
 1. A Record (Address Record)
@@ -496,13 +466,9 @@ In most web applications, both web servers and application servers work together
 
   * CAA records specify which certificate authorities are authorized to issue SSL/TLS certificates for a domain. They enhance security by controlling who can issue certificates for your domain.
 
-[TOC](#table-of-contents)
-
---------------------------------------------------------------------------
+[^](#need-to-know)
 
 # Single Point of Failure
---------------------------
-
   A "Single Point of Failure" (SPoF) is a critical weakness in a system or network where the failure of a single component can lead to a complete system failure. Here's an in-depth look at single points of failure:
 
 1. Definition
@@ -542,13 +508,9 @@ Downtime and service unavailability.
 
   * BCDR planning involves strategies for maintaining critical business functions during and after disasters, which includes minimizing SPoFs.
 
-[TOC](#table-of-contents)
-
--------------------------------------------------------------------------------
+[^](#need-to-know)
 
 # Avoiding Downtime when Deploying New Code
--------------------------------------------
-
   Minimizing downtime during code deployments is essential for maintaining the availability and reliability of web services and applications. Here's an overview of strategies to avoid downtime when deploying new code:
 
 1. Blue-Green Deployment
@@ -598,20 +560,13 @@ Downtime and service unavailability.
 
   * Inform users, stakeholders, and the operations team about upcoming deployments and expected downtime. Transparent communication can help manage expectations and reduce the impact of downtime.
 
-[TOC](#table-of-contents)
-
-------------------------------------------------------------------------------
+[^](#need-to-know)
 
 # High Availability Cluster
----------------------------
 (Active-Active/Active-Passive)
-------------------------------
-
   High availability (HA) clusters are designed to ensure system or service availability by eliminating single points of failure. There are two common configurations for high availability clusters: active-active and active-passive.
 
   # Active-Active Cluster:
-  ------------------------
-
 In an active-active cluster, all nodes or instances in the cluster are actively serving traffic or performing their designated tasks simultaneously. Here's an in-depth look at active-active clusters:
 
 1. Parallel Processing
@@ -662,13 +617,9 @@ In an active-active cluster, all nodes or instances in the cluster are actively 
 
   The choice between active-active and active-passive cluster configurations depends on your specific requirements, budget, and complexity tolerance. Active-active clusters provide optimal resource utilization and are suitable for high-demand applications, while active-passive clusters offer a more cost-effective approach with simplified management.
 
-[TOC](#table-of-contents)
-
--------------------------------------------------------------------------
+[^](#need-to-know)
 
 # What is HTTPS?
----------------
-
   HTTPS, or Hypertext Transfer Protocol Secure, is a fundamental technology for secure and encrypted communication over the Internet. Here's a comprehensive overview of HTTPS:
 
 1. HTTPS Defined
@@ -734,13 +685,9 @@ Google and other search engines prioritize websites using HTTPS. HTTPS can boost
 
 HTTPS is a critical technology for ensuring the security and privacy of online communication. It's a standard practice for any website or web application that handles sensitive data.
 
-[TOC](#table-of-contents)
-
--------------------------------------------------------------------------------
+[^](#need-to-know)
 
 # What is a Firewall?
----------------------
-
   A firewall is a fundamental component of network security that acts as a barrier to control and monitor incoming and outgoing network traffic. Here's a comprehensive overview of firewalls:
 
 1. Firewall Definition
@@ -805,5 +752,5 @@ HTTPS is a critical technology for ensuring the security and privacy of online c
 
 Firewalls are a fundamental tool for protecting networks and devices from unauthorized access, cyberattacks, and other security threats.
 
-[TOC](#table-of-contents)
+[^](#need-to-know)
 ===================================================================================
