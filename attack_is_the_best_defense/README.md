@@ -6,11 +6,11 @@
    * [Docker](#docker)
 
 # NEED TO KNOW?
-* [Network sniffing]()
-* [ARP spoofing]()
+* [Network sniffing](https://www.lifewire.com/definition-of-sniffer-817996)
+* [ARP spoofing](https://www.veracode.com/security/arp-spoofing)
 * [Connect to SendGrid’s SMTP relay using telnet]()
-* [What is Docker and why is it popular?]()
-* [Dictionary attack?]()
+* [What is Docker and why is it popular?](https://www.zdnet.com/article/what-is-docker-and-why-is-it-so-darn-popular/)
+* [Dictionary attack?](https://en.wikipedia.org/wiki/Dictionary_attack)
 
 man or help
 	* [tcpdump](https://man.openbsd.org/tcpdump.8)
