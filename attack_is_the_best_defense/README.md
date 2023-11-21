@@ -13,10 +13,10 @@
 * [Dictionary attack?](https://en.wikipedia.org/wiki/Dictionary_attack)
 
 man or help
-	* [tcpdump](https://man.openbsd.org/tcpdump.8)
-	* [hydra](https://www.kali.org/tools/hydra/)
-	* [telnet](https://linux.die.net/man/1/telnet)
-	* [docker](https://code.tools/man/1/docker-run/)
+   * [tcpdump](https://man.openbsd.org/tcpdump.8)
+   * [hydra](https://www.kali.org/tools/hydra/)
+   * [telnet](https://linux.die.net/man/1/telnet)
+   * [docker](https://code.tools/man/1/docker-run/)
 
 # Network basics
 	Networking is a big part of what made computers so powerful and why the Internet exists. It allows machines to communicate with each other.
