@@ -18,6 +18,6 @@ TASKS.
 
 
 
-I hope this pproject finds you in a GOOD PLACE!
+I hope this project finds you in a GOOD PLACE!
 
 HAPPY CODING! 
