@@ -1,7 +1,6 @@
 Web Infrastructure Design
 --------------------------
-[0x09](TASKS.md)
---readme
+[]() 0x09 [Tasks](TASKS.md)
 
 # Table of Contents
 - [Network Basics](#network-basics)
