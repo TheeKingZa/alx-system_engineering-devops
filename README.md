@@ -15,7 +15,7 @@
      * [Networking Basics](https://github.com/TheeKingZa/alx-system_engineering-devops/tree/master/0x07-networking_basics/README.md)
      * [Networking Basics 2](https://github.com/TheeKingZa/alx-system_engineering-devops/tree/master/0x08-networking_basics_2/README.md)
      * [Web Infrastructure Design](https://github.com/TheeKingZa/alx-system_engineering-devops/tree/master/0x09-web_infrastructure_design/README.md)
-     * [Attack Is The Best Defence]()
+     * [Attack Is The Best Defense](https://github.com/TheeKingZa/alx-system_engineering-devops/tree/master/attack_is_the_best_defense/README.md)
 
 
 * Other projects
