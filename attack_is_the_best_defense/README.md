@@ -2,8 +2,8 @@
 [<..](https://github.com/TheeKingZa/alx-system_engineering-devops/tree/master/README.md)
 ---
 # Concepts
-	* [Network Basics](#network-basics)
-	* [Docker](#docker)
+   * [Network Basics](#network-basics)
+   * [Docker](#docker)
 
 # NEED TO KNOW?
 * [Network sniffing]()
