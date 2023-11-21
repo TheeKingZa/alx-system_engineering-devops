@@ -1,5 +1,5 @@
 # attack_is_the_best_defense
-[<](https://github.com/TheeKingZa/alx-system_engineering-devops/tree/master/README.md)
+[<..](https://github.com/TheeKingZa/alx-system_engineering-devops/tree/master/README.md)
 ---
 # Concepts
 	* [Network Basics](#network-basics)
@@ -13,10 +13,10 @@
 * [Dictionary attack?]()
 
 man or help
-	* tcpdump
-	* hydra
-	* telnet
-	* docker
+	* [tcpdump](https://man.openbsd.org/tcpdump.8)
+	* [hydra](https://www.kali.org/tools/hydra/)
+	* [telnet](https://linux.die.net/man/1/telnet)
+	* [docker](https://code.tools/man/1/docker-run/)
 
 # Network basics
 	Networking is a big part of what made computers so powerful and why the Internet exists. It allows machines to communicate with each other.
@@ -29,7 +29,7 @@ man or help
 [^](#need-to-know)
 
 # Docker
-	* [What is Docker and why is it popular?](https://www.zdnet.com/article/what-is-docker-and-why-is-it-so-darn-popular/)
+   * [What is Docker and why is it popular?](https://www.zdnet.com/article/what-is-docker-and-why-is-it-so-darn-popular/)
 
 	Take note: The following instructions are run in a ubuntu-xenial virtual machine setup using Vagrant. To do the same, you can also install docker in any Vagrant virtual machine, or install docker on your host OS (Windows, Linux or Mac OS)
 
