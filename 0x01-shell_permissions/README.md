@@ -13,7 +13,7 @@ Struggling with the sandbox? Try this: Using Docker & WSL on your local host
 Resources
 Read or watch:
 
-Permissions
+# [Permissions](http://linuxcommand.org/lc3_lts0090.php)
 man or help:
 
 chmod
