@@ -13,7 +13,9 @@ Struggling with the sandbox? Try this: Using Docker & WSL on your local host
 Resources
 Read or watch:
 
-# [Permissions](http://linuxcommand.org/lc3_lts0090.php)
+[Permissions](http://linuxcommand.org/lc3_lts0090.php)
+---
+
 man or help:
 
 chmod
@@ -28,7 +30,7 @@ adduser
 useradd
 addgroup
 
-#Permissions
+# Permissions
 
     What do the commands chmod, sudo, su, chown, chgrp do
     Linux file permissions
