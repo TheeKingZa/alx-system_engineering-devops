@@ -4,6 +4,11 @@
 
     In this README, we will explore several important shell commands frequently used in Unix-like operating systems. Each command serves a distinct purpose and is crucial for various tasks.
 
+Read or watch:
+
+   * [Shell, I/O Redirection](http://linuxcommand.org/lc3_lts0070.php)
+   * [Special Characters](http://mywiki.wooledge.org/BashGuide/SpecialCharacters)
+
 # echo
     Description: The echo command is used to display text or variables on the terminal.
 
@@ -247,6 +252,14 @@
     * Tilde
         (~):
             Represents the user's home directory, e.g., ~username refers to the home directory of the specified user.
+
+# Other Man Pages
+   * How to display a line of text
+   * How to concatenate files and print on the standard output
+   * How to reverse a string
+   * How to remove sections from each line of files
+   * What is the /etc/passwd file and what is its format
+   * What is the /etc/shadow file and what is its format
 
 
 [^](#shell-directions-and-filters)
