@@ -49,8 +49,8 @@
   * [What are the characteristics of hidden files and how to list them
   * [What does the command cd - do
 
-# Looking Around]
-    * [What do the commands ls, less, file do]()
+# Looking Around
+  * [What do the commands ls, less, file do]()
   * [How do you use options and arguments with commands]()
   * [Understand the ls long format and how to display it]()
   * [A Guided Tour]()
