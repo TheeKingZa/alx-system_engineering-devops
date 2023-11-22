@@ -9,7 +9,7 @@
 # NEED TO KNOW?
 * [Network sniffing](#network-sniffing) -> [read more](https://www.lifewire.com/definition-of-sniffer-817996)
 * [ARP spoofing](#arp-spoofing) -> [read more](https://www.veracode.com/security/arp-spoofing)
-* [Connect to SendGrid’s SMTP relay using telnet](#connect-to-sendgrids-smtp-relay-using-telnet) -> [read more](https://docs.sendgrid.com/ui/account-and-settings/troubleshooting-delays-and-latency)
+* [Connect to SendGrid’s SMTP relay using telnet](#connecting-to-sendgrids-smtp-relay-using-telnet) -> [read more](https://docs.sendgrid.com/ui/account-and-settings/troubleshooting-delays-and-latency)
 * [What is Docker and why is it popular?](#docker-and-Its-popularity) -> [read more](https://www.zdnet.com/article/what-is-docker-and-why-is-it-so-darn-popular/)
 * [Dictionary attack?](#dictionary-attack) -> [read more](https://en.wikipedia.org/wiki/Dictionary_attack)
 
