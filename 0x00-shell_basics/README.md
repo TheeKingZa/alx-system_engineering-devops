@@ -91,5 +91,21 @@
   * [LTS]()
   * [What does LTS mean?]()
 
+# LTS (Long-Term Support):
+    LTS, or Long-Term Support, designates software releases that prioritize stability over new features.
+    These versions receive extended support, 
+    making them suitable for enterprise use, 
+    with collaboration among the development community to 
+    ensure ongoing maintenance and security.
+
+# Shebang:
+    The shebang, represented by #! at the start of a script,
+    specifies the interpreter to execute the script.
+    It automates the interpreter selection, 
+    allowing flexibility for various scripting languages 
+    and the inclusion of environment variables. 
+    The shebang is crucial for running scripts without 
+    explicitly specifying the interpreter on the command line.
+
 
 [^](#shell-basics)
