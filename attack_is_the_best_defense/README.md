@@ -7,11 +7,11 @@
    * [Docker](#docker)
 
 # NEED TO KNOW?
-* [Network sniffing](#network-sniffing)[...](https://www.lifewire.com/definition-of-sniffer-817996)
-* [ARP spoofing](https://www.veracode.com/security/arp-spoofing)
-* [Connect to SendGrid’s SMTP relay using telnet](https://docs.sendgrid.com/ui/account-and-settings/troubleshooting-delays-and-latency)
-* [What is Docker and why is it popular?](https://www.zdnet.com/article/what-is-docker-and-why-is-it-so-darn-popular/)
-* [Dictionary attack?](https://en.wikipedia.org/wiki/Dictionary_attack)
+* [Network sniffing](#network-sniffing) -> [read more](https://www.lifewire.com/definition-of-sniffer-817996)
+* [ARP spoofing](#arp-spoofing) -> [read more](https://www.veracode.com/security/arp-spoofing)
+* [Connect to SendGrid’s SMTP relay using telnet](#connect-to-sendgrids-smtp-relay-using-telnet) -> [read more](https://docs.sendgrid.com/ui/account-and-settings/troubleshooting-delays-and-latency)
+* [What is Docker and why is it popular?](#docker-and-Its-popularity) -> [read more](https://www.zdnet.com/article/what-is-docker-and-why-is-it-so-darn-popular/)
+* [Dictionary attack?](#dictionary-attack) -> [read more](https://en.wikipedia.org/wiki/Dictionary_attack)
 
 man or help
    * [tcpdump](https://man.openbsd.org/tcpdump.8)
@@ -164,5 +164,7 @@ man or help
 **Note**: The provided C code focuses on binary tree structures and is unrelated to the mentioned network security topics. It adheres to the Betty guidelines with comments explaining its functionality. Refer to the comments within the code for detailed explanations.
 
 Remember to respect ethical guidelines and legal boundaries when exploring network security concepts.
+---
 [^Network Sercurity Exploration](#network-security-exploration)
+---
 [^](#attack-is-the-best-defense)
