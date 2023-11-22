@@ -18,8 +18,8 @@ Read or watch:
 
 man or help:
 
-chmod
-sudo
+  [chmod](http://linuxcommand.org/lc3_man_pages/chmod1.html)
+  sudo
 su
 chown
 chgrp
