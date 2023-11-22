@@ -6,7 +6,7 @@
   * [What Is “The Shell”?](#what-is-the-shell)
   * [Navigation](#navigation)
   * [Looking Around](#looking-around)
-  * [A Guided Tour](#a-guided-tour)
+  * [A Guided Tour](http://linuxcommand.org/lc3_lts0040.php)
   * [Manipulating Files](#manipulating-files)
   * [Working With Commands](#working-with-commands)
   * [Reading Man pages](#reading-man-pages)
