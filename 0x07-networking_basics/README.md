@@ -1,7 +1,6 @@
-Network Basics #0
------------------
-0x07
-----
+# Network Basics #0
+[<]() 0x07 [<](https://github.com/TheeKingZa/alx-system_engineering-devops/tree/master/0x08-networking_basics_2/README.md)
+---
 
 Need To Know?!
 --------------
