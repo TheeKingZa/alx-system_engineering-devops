@@ -174,4 +174,4 @@ These concepts and commands are essential for effective shell scripting and cust
 ----------------------------------------------END-----------------------------------------------
 
 
-[^](#shell-variables-and-expansions
+[^](#shell-variables-and-expansions)
