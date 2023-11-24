@@ -1,5 +1,5 @@
 # Attack Is The Best Defense
-[<](https://github.com/TheeKingZa/alx-system_engineering-devops/tree/master/0x09-web_infrastructure_design/README.md)
+
 [..README](https://github.com/TheeKingZa/alx-system_engineering-devops/tree/master/README.md)
 ---
 # Concepts
