@@ -1,5 +1,5 @@
 # SSH
-[<]() 0x0B [#]()
+[<](https://github.com/TheeKingZa/alx-system_engineering-devops/edit/master/0x0A-configuration_management/README.md) 0x0B [#]()
 ---
 
 # Background Context
