@@ -1,5 +1,5 @@
 # System Engineering Development
-# [ALX](https://www.alxafrica.com)
+[<](https://github.com/TheeKingZa/Portfolio/blob/master/README.md)
 # Author: [Pule Mathikhha](https://pulemathikha.wordpress.com)
 
    * [Shell Basics](https://github.com/TheeKingZa/alx-system_engineering-devops/tree/master/0x00-shell_basics/README.md)
@@ -15,6 +15,8 @@
    * [Configuaration Management](https://github.com/TheeKingZa/alx-system_engineering-devops/tree/master/0x0A-configuaration_management/README.md)
    * [Attack Is The Best Defense](https://github.com/TheeKingZa/alx-system_engineering-devops/tree/master/attack_is_the_best_defense/README.md)
    * [SSH](https://github.com/TheeKingZa/alx-system_engineering-devops/tree/master/0x0B-ssh/README.md)
+
+# Other Projects
    * [Fix_My_Code_Challenge](https://github.com/TheeKingZa/fix_my_code_challenge/tree/master/README.md)
    * [AirBnB_Clone](https://github.com/TheeKingZa/airbnb_clone/tree/master/README.md)
    * [Alx-Low_Level_Programming](https://github.com/TheeKingZa/alx-low_level_programming/tree/master/README.md)
