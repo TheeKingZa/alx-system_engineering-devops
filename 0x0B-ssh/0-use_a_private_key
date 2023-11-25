@@ -1,9 +1,5 @@
-#!/bin/bash
-# Script to connect to a server using SSH with a private key
+#!/usr/bin/env bash
 
-# Use the ssh command to initiate the connection
-# -i specifies the path to the private key (~/.ssh/school)
-# -o StrictHostKeyChecking=no disables strict host key checking
-# -o UserKnownHostsFile=/dev/null ignores known hosts to prevent prompting
-# The username (ubuntu) and IP address (54.152.56.195) are specified at the end
-ssh -i ~/.ssh/school -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null ubuntu@54.152.56.195
+# SSH into server using the
+# private key and specified user
+ssh -i ~/.ssh/school ubuntu@54.152.56.195
