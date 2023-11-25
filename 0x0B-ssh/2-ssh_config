@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# 2-ssh_config
+
+# Use the private key ~/.ssh/school for authentication
+IdentityFile ~/.ssh/school
+
+# Refuse authentication using a password
+PasswordAuthentication no
+
+# Additional SSH configurations can be added if needed
+# For example, to automatically add the server's host key to the known_hosts file:
+# StrictHostKeyChecking ask
+
