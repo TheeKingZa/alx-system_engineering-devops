@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+# Your domain name obtained from .TECH Domains
+domain_name="myschool.tech"
+
+# Your web-01 server IP address
+web_01_ip="184.72.193.201"
+
+# Update DNS records with an A entry
+echo "$domain_name.  IN  A  $web_01_ip" | sudo tee -a /etc/bind/db.tech
+
+# Restart the DNS service
+sudo service bind9 restart
+
+# Check the DNS records using dig
+dig "$domain_name"
+
+# Output a message indicating successful configuration
+echo "DNS records for $domain_name have been configured successfully."
+
