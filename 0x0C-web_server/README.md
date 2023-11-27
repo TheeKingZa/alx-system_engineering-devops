@@ -94,7 +94,9 @@ For more information about child processes, see this [documentation](https://www
 ---
 ## Web Server
 
-    A web server is a software application or hardware device responsible for serving content (web pages, images, files) to clients over the internet.
+    A web server is a software application or hardware device
+    responsible for serving content (web pages, images, files)
+    to clients over the internet.
     It handles requests from clients and responds with the requested resources.
 
 ## Child Process
@@ -106,14 +108,16 @@ For more information about child processes, see this [documentation](https://www
 
 ## Parent and Child Processes in Web Servers
 
-    Web servers often use a parent-child process model for handling client requests efficiently.
+    Web servers often use a parent-child process model for
+    handling client requests efficiently.
     The parent process manages multiple child processes,
     each handling a specific client request.
     This architecture enhances concurrency and performance.
 
 ## HTTP Requests
 
-    HTTP (Hypertext Transfer Protocol) defines a set of request methods that clients can use to request resources from a web server.
+    HTTP (Hypertext Transfer Protocol) defines a set of 
+    request methods that clients can use to request resources from a web server.
     Common HTTP requests include GET (retrieve resource),
     POST (submit data),
     PUT (update resource),
@@ -121,7 +125,9 @@ For more information about child processes, see this [documentation](https://www
 
 ## DNS
 
-    DNS (Domain Name System) is a hierarchical and decentralized naming system that translates human-readable domain names into IP addresses.
+    DNS (Domain Name System) is a hierarchical and 
+    decentralized naming system that translates 
+    human-readable domain names into IP addresses.
     It resolves queries,
     allowing users to access websites using domain names rather than IP addresses.
 
@@ -140,21 +146,25 @@ For more information about child processes, see this [documentation](https://www
 
 ### A Record
 
-       An A record (Address Record) maps a domain name to the corresponding IPv4 address.
+       An A record (Address Record) maps a domain 
+       name to the corresponding IPv4 address.
 
 ### CNAME Record
 
-       A CNAME record (Canonical Name) alias allows a domain to be an alias for another domain.
+       A CNAME record (Canonical Name) alias allows a domain 
+       to be an alias for another domain.
        It is often used for subdomains or domain redirection.
 
 ### TXT Record
 
        A TXT record (Text Record) contains text information,
-       commonly used for domain verification or to provide additional information about a domain.
+       commonly used for domain verification or to provide
+       additional information about a domain.
 
 ### MX Record
 
-       An MX record (Mail Exchange) specifies the mail servers responsible for receiving email on behalf of the domain.
+       An MX record (Mail Exchange) specifies the mail servers
+       responsible for receiving email on behalf of the domain.
 
 
 
