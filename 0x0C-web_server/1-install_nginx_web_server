@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+# This script installs Nginx on an Ubuntu machine and configures it to meet specified requirements.
+
+# Update package list
+sudo apt-get update
+
+# Install Nginx
+sudo apt-get install -y nginx
+
+# Make sure Nginx is running
+sudo service nginx start
+
+# Create a default HTML page with "Hello World!"
+echo "<html><head><title>Hello World!</title></head><body>Hello World!</body></html>" | sudo tee /var/www/html/index.html
+
+# Configure Nginx to listen on port 80
+sudo sed -i 's/\blisten 80\b/listen 80 default_server/g' /etc/nginx/sites-available/default
+
+# Reload Nginx configuration
+sudo service nginx reload
+
+# Check if Nginx is listening on port 80
+netstat -tuln | grep ':80'
+
+# Test the page using curl
+curl -sI 127.0.0.1 | grep "Hello World!"
+
+# Output a message indicating successful configuration
+echo "Nginx has been installed and configured successfully. The server is now listening on port 80 and returns 'Hello World!' for GET requests at its root."
