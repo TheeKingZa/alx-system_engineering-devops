@@ -13,10 +13,10 @@
    * [Networking Basics 2](https://github.com/TheeKingZa/alx-system_engineering-devops/tree/master/0x08-networking_basics_2/README.md)
    * [Web Infrastructure Design](https://github.com/TheeKingZa/alx-system_engineering-devops/tree/master/0x09-web_infrastructure_design/README.md)
    * [Configuaration Management](https://github.com/TheeKingZa/alx-system_engineering-devops/tree/master/0x0A-configuaration_management/README.md)
-   * [Attack Is The Best Defense](https://github.com/TheeKingZa/alx-system_engineering-devops/tree/master/attack_is_the_best_defense/README.md)
    * [SSH](https://github.com/TheeKingZa/alx-system_engineering-devops/tree/master/0x0B-ssh/README.md)
    * [Web_Server](https://github.com/TheeKingZa/alx-system_engineering-devops/tree/master/0x0C-web_server/README.md)
    * [Web Stack Debugging 0](https://github.com/TheeKingZa/alx-system_engineering-devops/tree/master/0x0D-web_stack_debugging_0)
+* [Attack Is The Best Defense](https://github.com/TheeKingZa/alx-system_engineering-devops/tree/master/attack_is_the_best_defense/README.md)
 
 # Other Projects
    * [Fix_My_Code_Challenge](https://github.com/TheeKingZa/fix_my_code_challenge/tree/master/README.md)
