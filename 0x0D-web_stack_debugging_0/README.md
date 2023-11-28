@@ -30,11 +30,15 @@ Networking is a big part of what made computers so powerful and why the Internet
 
 
 
+[^](#need-to-know)
+
 Non-exhaustive guide to debugging
 School specific
 
       If you are struggling to get something right that is run on the checker, like a Bash script or a piece of code,
       keep in mind that you can simulate the flow by starting a Docker container with the distribution that is specified in the requirements and by running your code. Check the Docker concept page for more info.
+
+[^](#need-to-know)
 
 Test and verify your assumptions
 
@@ -58,6 +62,9 @@ Get a quick overview of the machine state
 [Youtube video First 5 Commands When I Connect on a Linux Server](https://youtu.be/1_gqlbADaAw?si=UjArygjr8pYnQ-pn)
 
 When you connect to a server/machine/computer/container you want to understand what’s happened recently and what’s happening now, and you can do this with [5 commands](https://www.linux.com/training-tutorials/first-5-commands-when-i-connect-linux-server/) in a minute or less:
+
+
+[^](#need-to-know)
 
 **w**
 
@@ -85,6 +92,9 @@ When you connect to a server/machine/computer/container you want to understand w
     * what port and IP your server is listening on
     * what processes are using sockets
     * try netstat -lpn on a Ubuntu machine
+
+[^](#need-to-know)
+
 # Machine
     Debugging is pretty much about verifying assumptions, in a perfect world the software or system we are working on would be working perfectly, the server is in perfect shape and everybody is happy. But actually, it NEVER goes this way, things ALWAYS fail (it’s tremendous!).
 
@@ -100,6 +110,8 @@ If the answer is no for any of these questions, then that might be the reason wh
       * increase the machine resources (adding memory, CPU, disk space…)
       * distributing the resource usage to other machines
 
+[^](#need-to-know)
+
 # Network issue
     For the machine level, you want to ask yourself these questions:
 
@@ -109,6 +121,8 @@ If the answer is no for any of these questions, then that might be the reason wh
       * Does the server have the correct firewall rules? iptables, ufw:
         * iptables -L
         * sudo ufw status
+
+[^](#need-to-know)
 
 # Process issue
     If a piece of Software isn’t behaving as expected, it can obviously be because of above reasons… but the good news is that there is more to look into (there is ALWAYS more to look into actually).
@@ -124,7 +138,13 @@ If the answer is no for any of these questions, then that might be the reason wh
         * Is there anything interesting in the logs?
         look for log files in /var/log/ and tail -f is your friend
 
+[^](#need-to-know)
+
 **Debugging is fun**
 
-Debugging can be frustrating, but it will definitely be part of your job, it requires experience and methodology to become good at it. The good news is that bugs are never going away, and the more experienced you become, trickier bugs will be assigned to you! Good luck :)
+Debugging can be frustrating, but it will definitely be part of your job, it requires experience and methodology to become good at it. The good news is that bugs are never going away, and the more experienced you become, trickier bugs will be assigned to you! 
+
+Good luck :)
+---
+
 [^](#web-stack-debugging-0)
