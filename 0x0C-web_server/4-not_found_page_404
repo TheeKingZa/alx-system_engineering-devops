@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# This script configures Nginx on an Ubuntu machine to have a custom 404 page.
+
+# Update the package list to ensure the latest versions are available
+sudo apt-get update
+
+# Install Nginx
+sudo apt-get install -y nginx
+
+# Create a custom 404 HTML file with the content "Ceci n'est pas une page"
+echo "Ceci n'est pas une page" | sudo tee /usr/share/nginx/html/404.html > /dev/null
+
+# Configure Nginx to use the custom 404 page
+sudo bash -c 'echo "error_page 404 /404.html;" >> /etc/nginx/sites-available/default'
+
+# Restart Nginx to apply the configuration changes
+sudo service nginx restart
+
+# The script ends here
