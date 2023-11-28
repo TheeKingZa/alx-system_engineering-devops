@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# This script sets up and troubleshoots Apache within a Docker container.
+
+# Start the Docker container with port mapping
+docker run -p 8080:80 -d -it holbertonschool/265-0
+
+# Get the Container ID
+container_id=$(docker ps -q)
+
+# Connect to the Container
+docker exec -it "$container_id"  /bin/bash
+
+# Start Apache Service
+service apache2 start
+
+# Check Apache Status
+service apache2 status
+
+# Verify if Hello Holberton is returned
+curl http://localhost:80
