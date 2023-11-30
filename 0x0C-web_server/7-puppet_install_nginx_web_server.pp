@@ -1,57 +1,27 @@
-# File: 7-puppet_install_nginx_web_server.pp
-class nginx_web_server {
-  # Update package list
-  package { 'nginx':
-    ensure => latest,
-  }
+# 7-puppet_install_nginx_web_server.pp
 
-  # Create a default HTML file with "Hello World!"
-  file { '/var/www/html/index.html':
-    ensure  => present,
-    content => 'Hello World!',
-  }
-
-  # Configure Nginx to use the custom HTML file
-  file { '/etc/nginx/sites-available/default':
-    ensure  => present,
-    content => template('nginx/default.erb'),
-    require => Package['nginx'],
-  }
-
-  # Enable Nginx site
-  exec { 'enable_nginx_site':
-    command => 'ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/',
-    path    => ['/bin', '/usr/bin'],
-    creates => '/etc/nginx/sites-enabled/default',
-    require => File['/etc/nginx/sites-available/default'],
-  }
-
-  # Configure 301 redirect
-  nginx::resource::location { '/redirect_me':
-    ensure    => present,
-    location  => '/new_location',
-    vhost     => 'default',
-    port      => 80,
-    ssl       => false,
-    server    => 'localhost',
-    proxy     => 'http://localhost/new_location',
-    ssl_proxy => false,
-  }
-
-  # Notify Nginx to reload after changes
-  service { 'nginx':
-    ensure  => running,
-    enable  => true,
-    require => Exec['enable_nginx_site'],
-    notify  => Exec['nginx_reload'],
-  }
-
-  # Reload Nginx after configuration changes
-  exec { 'nginx_reload':
-    command => 'systemctl reload nginx',
-    path    => ['/bin', '/usr/bin'],
-    refreshonly => true,
-  }
+# Install Nginx package
+package { 'nginx':
+  ensure => installed,
 }
 
-include nginx_web_server
+# Configure Nginx to listen on port 80
+file { '/etc/nginx/sites-available/default':
+  ensure  => file,
+  content => '# Nginx configuration file\nserver {\n\tlisten 80 default_server;\n\tlisten [::]:80 default_server;\n\n\troot /var/www/html;\n\tindex index.html index.htm index.nginx-debian.html;\n\n\tserver_name _;\n\n\tlocation / {\n\t\ttry_files  / =404;\n\t}\n\n\tlocation /redirect_me {\n\t\treturn 301 http://example.com;\n\t}\n\n\tlocation ~ \.php$ {\n\t\tinclude snippets/fastcgi-php.conf;\n\t\tfastcgi_pass unix:/var/run/php/php7.4-fpm.sock;\n\t\tfastcgi_param SCRIPT_FILENAME ;\n\t\tinclude fastcgi_params;\n\t}\n}\n',
+  require => Package['nginx'],
+}
+
+# Ensure Nginx service is running and enabled
+service { 'nginx':
+  ensure    => running,
+  enable    => true,
+  require   => File['/etc/nginx/sites-available/default'],
+}
+
+# Create Hello World index.html
+file { '/var/www/html/index.html':
+  ensure  => file,
+  content => 'Hello World!',
+  require => Package['nginx'],
+}
