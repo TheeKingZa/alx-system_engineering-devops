@@ -16,6 +16,9 @@
    * [SSH](https://github.com/TheeKingZa/alx-system_engineering-devops/tree/master/0x0B-ssh/README.md)
    * [Web_Server](https://github.com/TheeKingZa/alx-system_engineering-devops/tree/master/0x0C-web_server/README.md)
    * [Web Stack Debugging 0](https://github.com/TheeKingZa/alx-system_engineering-devops/tree/master/0x0D-web_stack_debugging_0)
+   * [Load Balancer](https://github.com/TheeKingZa/alx-system_engineering-devops/tree/master/0x0F-load_balancer/README.md)
+
+# Optional Tasks
 * [Attack Is The Best Defense](https://github.com/TheeKingZa/alx-system_engineering-devops/tree/master/attack_is_the_best_defense/README.md)
 
 # Other Projects
