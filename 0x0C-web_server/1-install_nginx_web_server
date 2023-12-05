@@ -15,4 +15,4 @@ sudo service nginx start
 
 # The following line is to ensure that Nginx is running
 # This line is optional and can be removed if not needed
-sudo service nginx status > /dev/null
+#sudo service nginx status > /dev/null
