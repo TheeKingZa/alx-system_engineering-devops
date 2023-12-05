@@ -1,40 +1,14 @@
-<<<<<<< HEAD
-#!/usr/bin/env bash
-# Bash Script
-
-# Install Nginx if not already installed
-sudo apt-get -y install nginx
-
-# Add custom header to Nginx confguration
-echo 'add_header X-Served-By $HOSTNAME;' | sudo tee -a /etc/nginx/sites-available/default
-=======
 #!/bin/bash
 
-# Install Nginx
+# Install Nginx if not already installed
 sudo apt-get update
 sudo apt-get install -y nginx
 
-# Create a custom configuration file for Nginx
-sudo tee /etc/nginx/sites-available/default-custom > /dev/null <<'EOF'
-server {
-    listen 80 default_server;
-    listen [::]:80 default_server;
+# Define the custom header value
+custom_header_value=$(hostname)
 
-    server_name _;
-
-    location / {
-        add_header X-Served-By $hostname;
-        # Your other Nginx configurations go here
-    }
-}
-EOF
-
-# Create a symbolic link to enable the custom configuration
-sudo ln -s /etc/nginx/sites-available/default-custom /etc/nginx/sites-enabled/
-
-# Test Nginx configuration
-sudo nginx -t
->>>>>>> 89606c7f267f2e4a0fe2805b7b93ea0730b7ddfe
+# Configure Nginx to include the custom header
+echo "add_header X-Served-By \"$custom_header_value\";" | sudo tee -a /etc/nginx/sites-available/default > /dev/null
 
 # Restart Nginx to apply changes
-sudo service nginx restart
+sudo systemctl restart nginx
