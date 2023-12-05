@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Uses private key with user ubuntu
 
 # SSH into server using the
 # private key and specified user
