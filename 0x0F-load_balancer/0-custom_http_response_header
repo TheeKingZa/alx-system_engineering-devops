@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+#!/usr/bin/env bash
+# Bash Script
+
+# Install Nginx if not already installed
+sudo apt-get -y install nginx
+
+# Add custom header to Nginx confguration
+echo 'add_header X-Served-By $HOSTNAME;' | sudo tee -a /etc/nginx/sites-available/default
+=======
 #!/bin/bash
 
 # Install Nginx
@@ -24,6 +34,7 @@ sudo ln -s /etc/nginx/sites-available/default-custom /etc/nginx/sites-enabled/
 
 # Test Nginx configuration
 sudo nginx -t
+>>>>>>> 89606c7f267f2e4a0fe2805b7b93ea0730b7ddfe
 
 # Restart Nginx to apply changes
 sudo service nginx restart
