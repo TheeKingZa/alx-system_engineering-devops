@@ -12,7 +12,7 @@
    * [Networking Basics](https://github.com/TheeKingZa/alx-system_engineering-devops/tree/master/0x07-networking_basics/README.md)
    * [Networking Basics 2](https://github.com/TheeKingZa/alx-system_engineering-devops/tree/master/0x08-networking_basics_2/README.md)
    * [Web Infrastructure Design](https://github.com/TheeKingZa/alx-system_engineering-devops/tree/master/0x09-web_infrastructure_design/README.md)
-   * [Configuaration Management](https://github.com/TheeKingZa/alx-system_engineering-devops/tree/master/0x0A-configuaration_management/README.md)
+   * [Configuaration Management](https://github.com/TheeKingZa/alx-system_engineering-devops/tree/master/0x0A-configuration_management/README.md)
    * [SSH](https://github.com/TheeKingZa/alx-system_engineering-devops/tree/master/0x0B-ssh/README.md)
    * [Web_Server](https://github.com/TheeKingZa/alx-system_engineering-devops/tree/master/0x0C-web_server/README.md)
    * [Web Stack Debugging 0](https://github.com/TheeKingZa/alx-system_engineering-devops/tree/master/0x0D-web_stack_debugging_0)
