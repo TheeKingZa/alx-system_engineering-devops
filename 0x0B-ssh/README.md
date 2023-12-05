@@ -8,7 +8,7 @@ Along with this project, you have been attributed an Ubuntu server, living in a 
 
 You can access your server information in the my servers section of the intranet, each line with contains the IP and username you should use to connect via ssh.
 
-Note: Your server is configured with an Ubuntu 20.04 LTS environment.
+Note: Your server is configured with an Ubuntu 20.04 LTS environment
 
 # NEED TO KNOW?
   * [What Is A (physical) server - text](https://en.wikipedia.org/wiki/Server_%28computing%29#Hardware_requirement)
