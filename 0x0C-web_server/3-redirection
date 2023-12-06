@@ -1,26 +1,36 @@
 #!/usr/bin/env bash
 # config nginx and Redirect me to another page
 
-# Update package list
-sudo apt-get update
+# Install Nginx if not already installed
+if [ ! -x "$(command -v nginx)" ]; then
+    sudo apt-get update
+    sudo apt-get install -y nginx
+fi
 
-# Install Nginx
-sudo apt-get install -y nginx
+# Create a configuration file for the redirection
+echo "server {
+    listen 80;
+    server_name _;
 
-# Make sure Nginx is running
-sudo service nginx start
+    location /redirect_me {
+        return 301 http://www.example.com/destination_page;
+    }
 
-# Create a default HTML page with a temporary redirection message
-echo "<html><head><title>Temporary Redirect</title></head><body><p>This page has moved <a href=\"https://example.com\">here</a>.</p></body></html>" | sudo tee /var/www/html/temp_redirect.html
+    # Additional Nginx configuration can be added here if needed
+}" | sudo tee /etc/nginx/sites-available/3-redirection > /dev/null
 
-# Configure Nginx to perform a 301 Moved Permanently redirection for /redirect_me
-sudo sed -i '/location \/ {/a \
-    location /redirect_me { \
-        return 301 https://example.com; \
-    }' /etc/nginx/sites-available/default
+# Create a symbolic link to enable the site
+sudo ln -s /etc/nginx/sites-available/3-redirection /etc/nginx/sites-enabled/
 
-# Reload Nginx configuration
-sudo service nginx reload
+# Test Nginx configuration
+sudo nginx -t
 
-# Output a message indicating successful configuration
-echo "Nginx has been configured to perform a 301 Moved Permanently redirection for /redirect_me to https://example.com."
+# Reload Nginx to apply the changes
+sudo systemctl reload nginx
+
+# Clean up default Nginx configuration (if needed)
+sudo rm /etc/nginx/sites-enabled/default
+sudo rm /etc/nginx/sites-available/default
+
+# Restart Nginx to ensure the changes take effect
+sudo systemctl restart nginx
