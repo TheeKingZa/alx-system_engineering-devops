@@ -1,10 +1,40 @@
 #!/usr/bin/env bash
+<<<<<<< HEAD
 # This script configures Nginx for a #01 redirection from /redirect_me
+=======
+# This script configures Nginx for a 301 redirection from /redirect_me
+>>>>>>> 34b8e1b51838b08cd711fb43ca2d4c237b7d880d
 
-ADD301_REDIRECT="\\\tlocation /redirect_me {\n\t\t return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;\n\t}\n"
+# Install Nginx if not already installed
+if [ ! -x "$(command -v nginx)" ]; then
+    sudo apt-get update
+    sudo apt-get install -y nginx
+fi
 
-# sudo apt update
-# sudo apt-get -y install nginx
-echo "Hello World!" | sudo tee /var/www/html/index.nginx-debian.html
-sudo sed -i "40i $ADD301_REDIRECT" /etc/nginx/sites-available/default
-sudo service nginx restart
+# Create a configuration file for the redirection
+echo "server {
+    listen 80;
+    server_name _;
+
+    location /redirect_me {
+        return 301 http://www.264799-web-01.tech;
+    }
+
+    # Additional Nginx configuration can be added here if needed
+}" | sudo tee /etc/nginx/sites-available/3-redirection > /dev/null
+
+# Create a symbolic link to enable the site
+sudo ln -s /etc/nginx/sites-available/3-redirection /etc/nginx/sites-enabled/
+
+# Test Nginx configuration
+sudo nginx -t
+
+# Reload Nginx to apply the changes
+sudo systemctl reload nginx
+
+# Clean up default Nginx configuration (if needed)
+sudo rm /etc/nginx/sites-enabled/default
+sudo rm /etc/nginx/sites-available/default
+
+# Restart Nginx to ensure the changes take effect
+sudo systemctl restart nginx
