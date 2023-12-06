@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# config nginx and Redirect me to another page
+# This script configures Nginx for a #01 redirection from /redirect_me
 
 ADD301_REDIRECT="\\\tlocation /redirect_me {\n\t\t return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;\n\t}\n"
 
