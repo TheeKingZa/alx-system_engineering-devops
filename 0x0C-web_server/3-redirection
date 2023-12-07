@@ -1,9 +1,5 @@
 #!/usr/bin/env bash
-<<<<<<< HEAD
-# This script configures Nginx for a #01 redirection from /redirect_me
-=======
 # This script configures Nginx for a 301 redirection from /redirect_me
->>>>>>> 34b8e1b51838b08cd711fb43ca2d4c237b7d880d
 
 # Install Nginx if not already installed
 if [ ! -x "$(command -v nginx)" ]; then
@@ -13,7 +9,7 @@ fi
 
 # Create a configuration file for the redirection
 echo "server {
-    listen 80;
+    listen 22;
     server_name _;
 
     location /redirect_me {
