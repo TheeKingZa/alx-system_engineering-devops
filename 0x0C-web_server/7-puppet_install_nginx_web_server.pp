@@ -18,10 +18,11 @@ server {\n
     location / {\n
         try_files \$uri \$uri/ =404;\n
         add_header X-Server-By \$hostname;\n
+        return 200 'Hello World!';\n
     }\n\n
     # Redirect /redirect_me to a new location\n
     location /redirect_me {\n
-        return 200 'Hello World';\n
+        return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;\n
     }\n
 }\n",
 }
@@ -38,4 +39,3 @@ service { 'nginx':
   enable  => true,
   require => File['/etc/nginx/sites-available/default', '/usr/share/nginx/html/404.html'],
 }
-
