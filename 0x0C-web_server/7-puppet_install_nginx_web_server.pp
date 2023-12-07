@@ -21,7 +21,7 @@ server {\n
     }\n\n
     # Redirect /redirect_me to a new location\n
     location /redirect_me {\n
-        return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;\n
+        return 200 'Hello World';\n
     }\n
 }\n",
 }
