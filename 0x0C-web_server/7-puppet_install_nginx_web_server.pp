@@ -5,23 +5,37 @@ package { 'nginx':
   ensure => installed,
 }
 
-# Configure Nginx to listen on port 80
+# Configure Nginx server
 file { '/etc/nginx/sites-available/default':
-  ensure  => file,
-  content => '# Nginx configuration file\nserver {\n\tlisten 80 default_server;\n\tlisten [::]:80 default_server;\n\n\troot /var/www/html;\n\tindex index.html index.htm index.nginx-debian.html;\n\n\tserver_name _;\n\n\tlocation / {\n\t\ttry_files  / =404;\n\t}\n\n\tlocation /redirect_me {\n\t\treturn 301 http://example.com;\n\t}\n\n\tlocation ~ \.php$ {\n\t\tinclude snippets/fastcgi-php.conf;\n\t\tfastcgi_pass unix:/var/run/php/php7.4-fpm.sock;\n\t\tfastcgi_param SCRIPT_FILENAME ;\n\t\tinclude fastcgi_params;\n\t}\n}\n',
-  require => Package['nginx'],
+  ensure  => present,
+  content => "# Nginx default configuration\n
+server {\n
+    listen 80 default_server;\n
+    listen [::]:80 default_server;\n\n
+    root /var/www/html;\n
+    index index.html index.htm index.nginx-debian.html;\n\n
+    server_name _;\n\n
+    location / {\n
+        try_files \$uri \$uri/ =404;\n
+        add_header X-Server-By \$hostname;\n
+    }\n\n
+    # Redirect /redirect_me to a new location\n
+    location /redirect_me {\n
+        return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;\n
+    }\n
+}\n",
+}
+
+# Create a custom 404 page
+file { '/usr/share/nginx/html/404.html':
+  ensure  => present,
+  content => "Ceci n'est pas une page",
 }
 
 # Ensure Nginx service is running and enabled
 service { 'nginx':
-  ensure    => running,
-  enable    => true,
-  require   => File['/etc/nginx/sites-available/default'],
+  ensure  => running,
+  enable  => true,
+  require => File['/etc/nginx/sites-available/default', '/usr/share/nginx/html/404.html'],
 }
 
-# Create Hello World index.html
-file { '/var/www/html/index.html':
-  ensure  => file,
-  content => 'Hello World!',
-  require => Package['nginx'],
-}
