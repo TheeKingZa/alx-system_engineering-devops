@@ -1,0 +1,29 @@
+#!/bin/bash
+
+# Install necessary tools
+sudo apt-get update
+sudo apt-get install -y net-tools curl
+
+# Check if Nginx is running and listening on port 80
+if ! netstat -tuln | grep -q 80; then
+    # Display error message and exit if not running
+    echo "Nginx is not running or not listening on port 80."
+    exit 1
+fi
+
+# Check Nginx error logs for issues
+error_log="/var/log/nginx/error.log"
+if [ -s "$error_log" ]; then
+    echo "Nginx error log:"
+    sudo cat "$error_log"
+fi
+
+# Restart Nginx to apply changes
+sudo systemctl restart nginx
+
+# Verify if Nginx is now listening on port 80
+if netstat -tuln | grep -q 80; then
+    echo "Nginx is now running and listening on port 80."
+else
+    echo "Failed to configure Nginx to listen on port 80."
+fi
