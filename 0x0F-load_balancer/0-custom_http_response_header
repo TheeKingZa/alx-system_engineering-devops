@@ -1,38 +1,28 @@
 #!/usr/bin/env bash
-# This script configures Nginx on a new Ubuntu machine with a custom header.
-
-# Update package lists
-sudo apt-get update
-
-# Install Nginx
-sudo apt-get install -y nginx
+# Configure Nginx so that its HTTP response contains a custom header
+# HTTP response contains a custom header (on web-01 and web-02)
 
 # Get the hostname
-hostname=PMc
+var=$(hostname)
 
-# Configure Nginx with the custom header
-sudo bash -c 'cat << EOF > /etc/nginx/sites-available/default
-server {
-    listen 80 default_server;
-    listen [::]:80 default_server;
+# Define strings for sed replacements
+new_string="error_page 404 \/custom_404.html;\n location \/redirect_me {\n return 301 \$scheme:\/\/www.google.com;"
+new_string2="server {\n\tadd_header X-Served-By $var;"
 
-    server_name _;
+# Update package lists and install Nginx
+sudo apt-get update -y
+sudo apt-get install nginx -y
 
-    add_header X-Served-By '$hostname';
+# Create a simple index.html
+echo "Hello World!" | sudo tee /usr/share/nginx/html/index.html > /dev/null
 
-    location / {
-        # Your existing configuration here
-        # For example, you can use try_files to serve a default index.html
-        try_files  / =404;
-    }
-}
-EOF'
+# Create a custom 404 page
+sudo mkdir -p /var/www/html
+echo "Ceci n'est pas une page" | sudo tee /var/www/html/custom_404.html > /dev/null
 
-# Create a symbolic link to enable the site
-sudo ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/
+# Modify the Nginx configuration using sed
+sudo sed -i -E "s/^[^#]+location \/ \{/$new_string/" /etc/nginx/sites-available/default
+sudo sed -i -E "s/^server \{/$new_string2/" /etc/nginx/sites-available/default
 
-# Remove default Nginx welcome page
-sudo rm -f /etc/nginx/sites-enabled/default
-
-# Restart Nginx
-sudo service nginx restart
+# Start Nginx service
+sudo service nginx start
