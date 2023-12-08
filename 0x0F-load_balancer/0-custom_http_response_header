@@ -1,28 +1,50 @@
 #!/usr/bin/env bash
-# Configure Nginx so that its HTTP response contains a custom header
-# HTTP response contains a custom header (on web-01 and web-02)
+# Installs and configures HAProxy in a load balancer server
 
-# Get the hostname
-var=$(hostname)
+# Install prerequisites
+sudo apt-get install -y software-properties-common
 
-# Define strings for sed replacements
-new_string="error_page 404 \/custom_404.html;\n location \/redirect_me {\n return 301 \$scheme:\/\/www.google.com;"
-new_string2="server {\n\tadd_header X-Served-By $var;"
+# Add HAProxy PPA (note: version 1.8 is not available in newer distributions)
+sudo add-apt-repository -y ppa:vbernat/haproxy-2.0
+sudo apt-get update
 
-# Update package lists and install Nginx
-sudo apt-get update -y
-sudo apt-get install nginx -y
+# Install HAProxy
+sudo apt-get install -y haproxy
 
-# Create a simple index.html
-echo "Hello World!" | sudo tee /usr/share/nginx/html/index.html > /dev/null
+# Enable HAProxy in /etc/default/haproxy
+echo "ENABLED=1" | sudo tee -a /etc/default/haproxy
 
-# Create a custom 404 page
-sudo mkdir -p /var/www/html
-echo "Ceci n'est pas une page" | sudo tee /var/www/html/custom_404.html > /dev/null
+# Backup the original HAProxy configuration file and create a new one
+sudo mv /etc/haproxy/haproxy.cfg{,.original}
+sudo touch /etc/haproxy/haproxy.cfg
 
-# Modify the Nginx configuration using sed
-sudo sed -i -E "s/^[^#]+location \/ \{/$new_string/" /etc/nginx/sites-available/default
-sudo sed -i -E "s/^server \{/$new_string2/" /etc/nginx/sites-available/default
+# Append HAProxy configuration to /etc/haproxy/haproxy.cfg
+printf %s "global
+    log 127.0.0.1 local0 notice
+    maxconn 2000
+    user haproxy
+    group haproxy
+defaults
+    log     global
+    mode    http
+    option  httplog
+    option  dontlognull
+    retries 3
+    option redispatch
+    timeout connect  5000
+    timeout client  10000
+    timeout server  10000
+listen hbnb
+    bind 0.0.0.0:80
+    mode http
+    stats enable
+    stats uri /haproxy?stats
+    balance roundrobin
+    option httpclose
+    option forwardfor
+    server 264799-web-01 100.26153.74:80 check
+    server 264799-web-02 52.86.237.106:80 check
+" | sudo tee -a /etc/haproxy/haproxy.cfg
 
-# Start Nginx service
-sudo service nginx start
+# Start the HAProxy service
+sudo service haproxy start
