@@ -1,24 +1,38 @@
 #!/usr/bin/env bash
-# This acript install nginx webServer
+# This script configures Nginx on a new Ubuntu machine with a custom header.
 
-ADD301_REDIRECT="\\\tlocation / redirect_me {\n\t\t return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;\n\t}\n"
-ADD_RESPONSE_HEADER="\\\tadd_header X-Served-By $HOSTNAME;"
+# Update package lists
+sudo apt-get update
 
-# update pkgs repo
-sudo apt update
+# Install Nginx
+sudo apt-get install -y nginx
 
-# install Nginx if it dont exist
-sudo apt-get -y install nginx
+# Get the hostname
+hostname=PMc
 
-# echo Hello World to file
-echo "Hello World" | sudo tee /var/www/htmlindex.nginx-debian.html
+# Configure Nginx with the custom header
+sudo bash -c 'cat << EOF > /etc/nginx/sites-available/default
+server {
+    listen 80 default_server;
+    listen [::]:80 default_server;
 
-sudo touch /etc/nginx/sites-available/default
+    server_name _;
 
-# Append the redirect_me location to file
-sudo sed -i "40i $ADD301_REDIRECT" /etc/nginx/sites-available/default
-# Append response header to file
-sudo sed -i "24i $ADD_RESPONSE_HEADER" /etc/nginx/sites-available/default
+    add_header X-Served-By '$hostname';
 
-# restart server
+    location / {
+        # Your existing configuration here
+        # For example, you can use try_files to serve a default index.html
+        try_files  / =404;
+    }
+}
+EOF'
+
+# Create a symbolic link to enable the site
+sudo ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/
+
+# Remove default Nginx welcome page
+sudo rm -f /etc/nginx/sites-enabled/default
+
+# Restart Nginx
 sudo service nginx restart
