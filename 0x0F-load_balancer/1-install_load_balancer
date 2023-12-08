@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-# Insatlling load_balancer
+# Installing load_balancer
+
 # Update the package list
 sudo apt-get update
 
@@ -33,4 +34,3 @@ sudo service haproxy restart
 
 # Enable HAProxy to start on boot
 sudo systemctl enable haproxy
-
