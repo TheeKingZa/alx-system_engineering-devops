@@ -4,7 +4,7 @@
 # Install prerequisites
 sudo apt-get install -y software-properties-common
 
-# Add HAProxy PPA (note: version 1.8 is not available in newer distributions)
+# Add HAProxy PPA (version 2.0)
 sudo add-apt-repository -y ppa:vbernat/haproxy-2.0
 sudo apt-get update
 
