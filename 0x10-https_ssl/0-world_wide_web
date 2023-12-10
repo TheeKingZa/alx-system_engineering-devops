@@ -8,7 +8,8 @@ get_dns_info() {
     local record_type="$3"
     
     # Use dig to get DNS information and awk to extract relevant details
-    local result=$(dig "$subdomain.$domain" | awk '/ANSWER SECTION:/ { getline; print $4 }')
+    local result
+    result=$(dig "$subdomain.$domain" | awk '/ANSWER SECTION:/ { getline; print $4 }')
 
     # Display the information
     echo "The subdomain $subdomain is a $record_type record and points to $result"
