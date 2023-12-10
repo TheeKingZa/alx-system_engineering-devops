@@ -1,48 +1,23 @@
 #!/usr/bin/env bash
-# Installs and configures HAProxy in a load balancer server
+# Install and configure HAProxy
 
-# Install prerequisites
-sudo apt-get install -y software-properties-common
-sudo add-apt-repository -y ppa:vbernat/haproxy-1.8
-sudo apt-get update
+sudo apt-get update -y
+sudo apt-get install -y haproxy
 
-# Install HAProxy version 1.8
-sudo apt-get install -y haproxy=1.8.*
+sudo echo "ENABLED=1" >> sudo /etc/default/haproxy
 
-# Enable HAProxy in /etc/default/haproxy
-echo "ENABLED=1" | sudo tee -a /etc/default/haproxy
-
-# Backup the original HAProxy configuration file and create a new one
-sudo mv /etc/haproxy/haproxy.cfg{,.original}
-sudo touch /etc/haproxy/haproxy.cfg
-
-# Append HAProxy configuration to /etc/haproxy/haproxy.cfg
-printf %s "global
-    log 127.0.0.1 local0 notice
-    maxconn 2000
-    user haproxy
-    group haproxy
-defaults
-    log     global
-    mode    http
-    option  httplog
-    option  dontlognull
-    retries 3
-    option redispatch
-    timeout connect  5000
-    timeout client  10000
-    timeout server  10000
-listen hbnb
-    bind 0.0.0.0:80
-    mode http
-    stats enable
-    stats uri /haproxy?stats
-    balance roundrobin
-    option httpclose
+echo "
+frontend hbnbclone
+    bind *:80
     option forwardfor
-    server 264799-web-01 100.26153.74 check
-    server 264799-web-02 52.86.237.106:80 check
-" | sudo tee -a /etc/haproxy/haproxy.cfg
+    default_backend myservers
 
-# Start the HAProxy service
+backend myservers
+    balance roundrobin
+    server 264799-web-01 100.26.153.74 check port 80
+    server 264799-web-02 52.86.237.106 check port 80
+    option httpchk
+    option httpclose
+" >> /etc/haproxy/haproxy.cfg
+
 sudo service haproxy start
