@@ -1,30 +1,30 @@
-#!/bin/bash
+#!/usr/bin/env bash
+# This script displays information about subdomains based on DNS records.
 
-# Function to display information about a subdomain
-display_info() {
-    domain="$1"
-    subdomain="$2"
+# Function to get DNS information
+get_dns_info() {
+    local domain="$1"
+    local subdomain="$2"
+    local record_type="$3"
+    
+    # Use dig to get DNS information and awk to extract relevant details
+    local result=$(dig "$subdomain.$domain" | awk '/ANSWER SECTION:/ { getline; print $4 }')
 
-    if [ -z "$subdomain" ]; then
-        subdomains=("www" "lb-01" "web-01" "web-02")
-    else
-        subdomains=("$subdomain")
-    fi
-
-    for sub in "${subdomains[@]}"; do
-        result=$(dig "$sub.$domain" | grep -A1 'ANSWER SECTION:')
-        record_type=$(echo "$result" | awk '{print $4}')
-        destination=$(echo "$result" | awk '{print $5}')
-        echo "The subdomain $sub is a $record_type record and points to $destination"
-    done
+    # Display the information
+    echo "The subdomain $subdomain is a $record_type record and points to $result"
 }
 
-# Check if the script is called with the correct number of arguments
-if [ "$#" -lt 1 ] || [ "$#" -gt 2 ]; then
+# Check the number of arguments
+if [ "$#" -eq 1 ]; then
+    # Display information for default subdomains
+    get_dns_info "$1" "www" "A"
+    get_dns_info "$1" "lb-01" "A"
+    get_dns_info "$1" "web-01" "A"
+    get_dns_info "$1" "web-02" "A"
+elif [ "$#" -eq 2 ]; then
+    # Display information for the specified subdomain
+    get_dns_info "$1" "$2" "A"
+else
+    # Display usage information if the number of arguments is incorrect
     echo "Usage: $0 <domain> [subdomain]"
-    exit 1
 fi
-
-# Call the display_info function with provided arguments
-display_info "$1" "$2"
-
