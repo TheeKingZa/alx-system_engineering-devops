@@ -1,31 +1,33 @@
 #!/usr/bin/env bash
-# This script displays information about subdomains based on DNS records.
+# Bash script that will display information about subdomains.
+# Function to check default subdomains
+function domain_check {
+    # Array of default subdomains
+    domain_names=("www" "lb-01" "web-01" "web-02")
 
-# Function to get DNS information
-get_dns_info() {
-    local domain="$1"
-    local subdomain="$2"
-    local record_type="$3"
-    
-    # Use dig to get DNS information and awk to extract relevant details
-    local result
-    result=$(dig "$subdomain.$domain" | awk '/ANSWER SECTION:/ { getline; print $4 }')
-
-    # Display the information
-    echo "The subdomain $subdomain is a $record_type record and points to $result"
+    # Iterate over each default subdomain
+    for i in "${domain_names[@]}"; do
+        # Use dig to get DNS information, grep to filter ANSWER SECTION, and awk to format output
+        dig "${i}"."$1" | grep -A1 'ANSWER SECTION:' | \
+        awk 'FNR == 2 {printf "The subdomain %s is a %s record and points to %s\n", var, $4, $5}' var="$i"
+    done
 }
 
-# Check the number of arguments
-if [ "$#" -eq 1 ]; then
-    # Display information for default subdomains
-    get_dns_info "$1" "www" "A"
-    get_dns_info "$1" "lb-01" "A"
-    get_dns_info "$1" "web-01" "A"
-    get_dns_info "$1" "web-02" "A"
-elif [ "$#" -eq 2 ]; then
-    # Display information for the specified subdomain
-    get_dns_info "$1" "$2" "A"
+# Function to check a specific subdomain
+function subdomain_check {
+    # Use dig to get DNS information, grep to filter ANSWER SECTION, and awk to format output
+    dig "${2}"."$1" | grep -A1 'ANSWER SECTION:' | \
+    awk 'FNR == 2 {printf "The subdomain %s is a %s record and points to %s\n", var, $4, $5}' var="$2"
+}
+
+# Check the number of command line arguments
+if [ $# -lt 1 ]; then
+    # If no domain is provided, prompt the user to provide a domain
+    echo "*** Provide domain name ***"
+elif [ $# -eq 1 ]; then
+    # If only one argument is provided, call domain_check function
+    domain_check "$1"
 else
-    # Display usage information if the number of arguments is incorrect
-    echo "Usage: $0 <domain> [subdomain]"
+    # If two arguments are provided, call subdomain_check function
+    subdomain_check "$1" "$2"
 fi
