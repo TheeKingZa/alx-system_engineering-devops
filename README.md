@@ -18,6 +18,7 @@
    * [Web Stack Debugging 0](https://github.com/TheeKingZa/alx-system_engineering-devops/tree/master/0x0D-web_stack_debugging_0)
    * [Web_stack_debugging_1](https://github.com/TheeKingZa/alx-system_engineering-devops/tree/master/0x0E-web_stack_debugging_1/README.md)
    * [Load Balancer](https://github.com/TheeKingZa/alx-system_engineering-devops/tree/master/0x0F-load_balancer/README.md)
+   * [HTTPS & SSL](https://github.com/TheeKingZa/alx-system_engineering-devops/tree/master/0x10-https_ssl/README.md)
    * [What Happens When You Type google.com In Your Browswer and Press ENTER](https://github.com/TheeKingZa/alx-system_engineering-devops/tree/master/0x11-what_happens_when_your_type_google_com_in_your_browser_and_press_enter/README)
 
 # Optional Tasks
