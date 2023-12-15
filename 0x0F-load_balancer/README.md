@@ -1,5 +1,5 @@
 # Load balancer
-[<](https://github.com/TheeKingZa/alx-system_engineering-devops/tree/master/0x0E-web_stack_debugging_1/README.md) 0x0F [#](https://github.com/TheeKingZa/alx-system_engineering-devops/tree/master/README.md)
+[<](https://github.com/TheeKingZa/alx-system_engineering-devops/tree/master/0x0E-web_stack_debugging_1/README.md) 0x0F [>](https://github.com/TheeKingZa/alx-system_engineering-devops/blob/master/0x10-https_ssl/README.md)
 ---
 
 [web server project](https://github.com/TheeKingZa/alx-system_engineering-devops/tree/master/0x0C-web_server/README.md)
