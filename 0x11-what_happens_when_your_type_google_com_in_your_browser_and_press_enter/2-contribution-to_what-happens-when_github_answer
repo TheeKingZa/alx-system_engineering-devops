@@ -1,0 +1,37 @@
+## Contribution to "What Happens When" Repository
+
+### Changes Made
+Added a comprehensive answer for the scenario where the 'g' key is pressed in the README.md file. Included detailed information about the steps involved in processing the 'g' key press in a browser.
+
+### How to Test
+Follow the steps mentioned in the README to understand the flow when the 'g' key is pressed.
+
+### Additional Notes
+This contribution aims to enhance the existing content by providing a more detailed explanation of the scenario. Feel free to reach out for any clarifications or further improvements.
+
+Commit Your Changes: After making changes, commit them to your local repository.
+
+	_bashCode_:
+		git add .
+		git commit -m "Add comprehensive answer for the 'g' key press"
+	
+		Push Changes to Your Fork: Push the changes to your forked repository on GitHub.
+
+	_bashCode_:
+		git push origin add-g-key-press
+		Now, you can create a pull request on the GitHub website.
+
+
+# Create a Pull Request:
+
+	Visit your forked repository on GitHub, and you should see a "Compare & pull request" button. Click it to open a new pull request.
+
+	Submit the Pull Request: Once you've filled in the details, click on the "Create pull request" button to submit your changes for review.
+
+	After creating the pull request, you can share the URL of the pull request in your answer file and here. The URL typically looks like this:
+```
+	example:
+		https://github.com/your-username/project_or_github_account/pull/1
+```
+real example:
+* [Link to Pull Request](https://github.com/TheeKingZa/0x11-what_happens_when_your_type_google_com_in_your_browser_and_press_enter/pull/1)
