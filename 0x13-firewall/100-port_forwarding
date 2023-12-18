@@ -1,5 +1,4 @@
 #!/bin/bash
-
 # This script configures port forwarding on web-01 using ufw.
 # It redirects incoming traffic on port 8080 to port 80.
 
