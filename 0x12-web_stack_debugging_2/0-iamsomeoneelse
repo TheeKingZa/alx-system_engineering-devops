@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# This script runs the whoami command
+# Under the user passed as argument
+
+# Check if the correct number of argumnent is provided
+if [ "$#" -ne 1]; then
+    echo "Usage: $0 <username>"
+    exit 1
+fi
+
+# Run the whoami command user the specified user
+sudo -u "$1" whoami
+
+# Exit with success status
+exit 0
