@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# This script configures Nginx to run as the nginx user
+
+sed -i 's/user\s*=\s*www-data;/user nginx;/' /etc/nginx/nginx.conf
+service nginx restart
+exit 0
