@@ -7,7 +7,8 @@ For this project, we expect you to look at these concepts:
 
 * [Database administration](#database-administration)
 * [Web stack debugging](https://github.com/TheeKingZa/alx-system_engineering-devops/tree/master/0x0D-web_stack_debugging_0/README.md)
-* [[How to] Install mysql 5.7](#how-to-install-mysql-57)
+* [[How to] Install mysql 5.7](#how-to-install-mysql)
+
 ---
 
 # NEED TO KNOW
@@ -21,7 +22,7 @@ For this project, we expect you to look at these concepts:
 )
 * [What operation should you regularly perform to make sure that your database backup strategy actually works](#regular-operations-for-batabase-backup-strategy
 )
-
+-----
 man or help:
 * [mysqldump](https://dev.mysql.com/doc/refman/8.0/en/mysqldump.html)
 
@@ -38,7 +39,7 @@ man or help:
 
 [^](#need-to-know)
 
-# How to Install mysql 5.7
+# How to Install mysql
 
 ```
 Copy the key here to your clipboard
