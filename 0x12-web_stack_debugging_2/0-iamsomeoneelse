@@ -3,7 +3,7 @@
 # Under the user passed as argument
 
 # Check if the correct number of argumnent is provided
-if [ "$#" -ne 1]; then
+if [ "$#" -ne 1 ]; then
     echo "Usage: $0 <username>"
     exit 1
 fi
