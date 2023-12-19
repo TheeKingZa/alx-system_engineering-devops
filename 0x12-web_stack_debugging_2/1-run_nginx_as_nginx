@@ -10,8 +10,10 @@ sed -i 's/listen\s*80;/listen 8080;/g' /etc/nginx/sites-available/default
 # Restart Nginx to apply the changes
 service nginx restart
 
-# Verify the Nginx processes and port 8080
+# Verify the Nginx processes and port 8080 using pgrep
 pgrep -f 'nginx'
+
+# Verify the Nginx is listening on port 8080 
 nc -z 0 8080
 
 # Exit with success status
