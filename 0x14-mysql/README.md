@@ -1,5 +1,5 @@
 # MySql
-[<]() 0x14 [#]()
+[<]() 0x14 [#](https://github.com/TheeKingZa/Portfolio)
 ---
 
 # Concepts
