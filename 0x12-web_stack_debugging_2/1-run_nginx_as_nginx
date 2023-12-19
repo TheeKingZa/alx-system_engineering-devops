@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# This script configures the container to run Nginx as the nginx user
+
+# Update the Nginx config. to run as the nginx user
+sudo sed -i 's/user\s*=\s*www-data;/user nginx;/' /etc/nginx/nginx.conf
+
+# Restart to apply the changes
+sudo service nginx restart
+
+# Exit with success status
+exit 0
