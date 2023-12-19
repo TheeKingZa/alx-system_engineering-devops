@@ -60,10 +60,10 @@ add the apt repo
     update apt
 
     sudo apt-get update
-
-now check your available versions:
-
 ```
+now check your available versions:
+```
+
 vagrant@ubuntu-focal:/vagrant$ sudo apt-cache policy mysql-server
 mysql-server:
   Installed: (none)
