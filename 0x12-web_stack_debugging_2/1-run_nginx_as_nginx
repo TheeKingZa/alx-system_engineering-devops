@@ -11,7 +11,7 @@ sed -i 's/listen\s*80;/listen 8080;/g' /etc/nginx/sites-available/default
 service nginx restart
 
 # Verify the Nginx processes and port 8080
-ps auxff | grep ngin[x]
+pgrep -f 'ngin'
 nc -z 0 8080
 
 # Exit with success status
