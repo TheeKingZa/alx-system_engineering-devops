@@ -256,28 +256,28 @@ Read or watch:
 # Other Man Pages
    * How to display a line of text:
          man echo
-     ```
+    ```
 echo "Hello, world!"
-     ```
+    ```
    * How to concatenate files and print on the standard output: man cat
-     ```
+    ```
 cat file1.txt file2.txt
-     ```
+    ```
    * How to reverse a string: man rev
     ```
 echo "hello" | rev
-     ```
+    ```
    * How to remove sections from each line of files: man cut
     ```
 cut -d' ' -f2 file.txt 
-     ```
+    ```
    * What is the /etc/passwd file and what is its format: man 5 passwd
     ```
 The /etc/passwd file contains user account information. Each line represents a user and is divided into fields separated by colons. The fields typically include the username, encrypted password, user ID (UID), group ID (GID), home directory, and login shell.
-     ```
+    ```
    * What is the /etc/shadow file and what is its format: man 5 shadow
-     ```
+    ```
 The /etc/shadow file stores the encrypted passwords and other security information for user accounts. It is readable only by the root user. The format includes fields such as username, encrypted password, password-related information, and account expiration details.
-     ```
+    ```
 
 [^](#shell-directions-and-filters)
