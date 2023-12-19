@@ -48,7 +48,8 @@ Copy the key here to your clipboard
 [https://dev.mysql.com/doc/refman/5.7/en/checking-gpg-signature.html](https://dev.mysql.com/doc/refman/5.7/en/checking-gpg-signature.html)
 
 ```
-    Save it in a file on your machine i.e. signature.key and then
+    Save it in a file on your machine
+    i.e. signature.key and then
 
         sudo apt-key add signature.key
 ```
@@ -66,6 +67,7 @@ now check your available versions:
 
 vagrant@ubuntu-focal:/vagrant$ sudo apt-cache policy mysql-server
 mysql-server:
+
   Installed: (none)
   Candidate: 8.0.27-0ubuntu0.20.04.1
   Version table:
@@ -92,10 +94,10 @@ Copyright © 2023 ALX, All rights reserved.
 ```
 A database is a structured collection of data that facilitates efficient data storage, retrieval, and manipulation. It serves as a reliable and centralized system for managing information. The key roles of a database include:
 
-- **Data Storage:** Storing data in an organized and structured manner.
-- **Data Retrieval:** Efficiently retrieving specific data based on user queries.
-- **Data Manipulation:** Updating, deleting, and inserting data as needed.
-- **Data Integrity:** Ensuring data accuracy and consistency.
+- Data Storage: Storing data in an organized and structured manner.
+- Data Retrieval: Efficiently retrieving specific data based on user queries.
+- Data Manipulation: Updating, deleting, and inserting data as needed.
+- Data Integrity: Ensuring data accuracy and consistency.
 ```
 
 
@@ -105,9 +107,9 @@ A database is a structured collection of data that facilitates efficient data st
 ```
 A database replica is a copy of the original database created and maintained to enhance system reliability and performance. Key characteristics of database replicas include:
 
-- **Types of Replicas:** Primary (master) and secondary (slave) replicas.
-- **Load Balancing:** Distributing read operations across multiple replicas to improve performance.
-- **Fault Tolerance:** Providing redundancy to ensure system availability in case of a primary replica failure.
+- Types of Replicas: Primary (master) and secondary (slave) replicas.
+- Load Balancing: Distributing read operations across multiple replicas to improve performance.
+- Fault Tolerance: Providing redundancy to ensure system availability in case of a primary replica failure.
 
 ```
 
@@ -115,9 +117,9 @@ A database replica is a copy of the original database created and maintained to 
 
 The primary purposes of having database replicas include:
 ```
-- **High Availability:** Ensuring continuous access to data even in the face of hardware failures or maintenance.
-- **Scalability:** Distributing read operations among replicas to handle increasing workloads.
-- **Disaster Recovery:** Facilitating quick recovery in case of data center failures or disasters.
+- High Availability: Ensuring continuous access to data even in the face of hardware failures or maintenance.
+- Scalability: Distributing read operations among replicas to handle increasing workloads.
+- Disaster Recovery: Facilitating quick recovery in case of data center failures or disasters.
 ```
 
 [^](#need-to-know)
@@ -126,18 +128,18 @@ The primary purposes of having database replicas include:
 
 Storing database backups in diverse physical locations is crucial for several reasons:
 ```
-- **Disaster Recovery:** Protecting against data loss due to natural disasters, fires, or other catastrophic events.
-- **Data Integrity:** Avoiding a single point of failure that could compromise all backups.
-- **Regulatory Compliance:** Meeting regulatory requirements for data backup and storage.
+- Disaster Recovery: Protecting against data loss due to natural disasters, fires, or other catastrophic events.
+- Data Integrity: Avoiding a single point of failure that could compromise all backups.
+- Regulatory Compliance: Meeting regulatory requirements for data backup and storage.
 ```
 
 # Regular Operations for Database Backup Strategy
 
 To ensure the effectiveness of the database backup strategy, regularly perform the following operations:
 ```
-- **Backup Testing:** Periodically restore backups to verify their completeness and integrity.
-- **Monitoring:** Monitor backup processes to detect any issues or failures promptly.
-- **Documentation:** Maintain comprehensive documentation on the backup strategy and recovery procedures.
+Backup Testing: Periodically restore backups to verify their completeness and integrity.
+Monitoring: Monitor backup processes to detect any issues or failures promptly.
+Documentation: Maintain comprehensive documentation on the backup strategy and recovery procedures.
 ```
 ---
 
