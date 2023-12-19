@@ -259,6 +259,7 @@ Read or watch:
     ```
 echo "Hello, world!"
     ```
+-----
    * How to concatenate files and print on the standard output:
        * man cat
     ```
