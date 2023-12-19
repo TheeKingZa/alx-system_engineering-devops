@@ -91,9 +91,8 @@ Copyright © 2023 ALX, All rights reserved.
 ---
 
 # Main Role of a Database
-```
 A database is a structured collection of data that facilitates efficient data storage, retrieval, and manipulation. It serves as a reliable and centralized system for managing information. The key roles of a database include:
-
+```
 - Data Storage: Storing data in an organized and structured manner.
 - Data Retrieval: Efficiently retrieving specific data based on user queries.
 - Data Manipulation: Updating, deleting, and inserting data as needed.
@@ -104,9 +103,9 @@ A database is a structured collection of data that facilitates efficient data st
 [^](#need-to-know)
 
 # Database Replica
-```
-A database replica is a copy of the original database created and maintained to enhance system reliability and performance. Key characteristics of database replicas include:
 
+A database replica is a copy of the original database created and maintained to enhance system reliability and performance. Key characteristics of database replicas include:
+```
 - Types of Replicas: Primary (master) and secondary (slave) replicas.
 - Load Balancing: Distributing read operations across multiple replicas to improve performance.
 - Fault Tolerance: Providing redundancy to ensure system availability in case of a primary replica failure.
