@@ -38,7 +38,7 @@ man or help:
 
 [^](#need-to-know)
 
-# [How to] Install mysql 5.7
+# How to Install mysql 5.7
 
 ```
 Copy the key here to your clipboard
