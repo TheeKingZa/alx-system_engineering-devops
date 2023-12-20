@@ -1,0 +1,8 @@
+# MySQL replica configuration file
+
+[mysqld]
+bind-address = 0.0.0.0
+# ... (other configurations)
+
+server-id = 2
+replicate-do-db = tyrell_corp
