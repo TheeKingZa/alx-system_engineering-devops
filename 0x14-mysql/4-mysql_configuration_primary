@@ -1,5 +1,5 @@
 # MySQL primary configuration file
 
 [mysqld]
-bind-address = 0.0.0.0
+bind-address = 127.0.0.1
 # ... (other configurations)
