@@ -18,17 +18,17 @@ Read or watch:
 
 man or help:
 
-  [chmod](http://linuxcommand.org/lc3_man_pages/chmod1.html)
-  sudo
-su
-chown
-chgrp
-id
-groups
-whoami
-adduser
-useradd
-addgroup
+* [chmod](http://linuxcommand.org/lc3_man_pages/chmod1.html)
+* sudo
+* su
+* chown
+* chgrp
+* id
+* groups
+* whoami
+* adduser
+* useradd
+* addgroup
 
 # Permissions
 
