@@ -9,6 +9,7 @@ import requests
 if __name__ == "__main__":
     # Fetching all users
     all_users = requests.get(
+
         'https://jsonplaceholder.typicode.com/users'
         ).json()
 
