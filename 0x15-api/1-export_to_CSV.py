@@ -27,6 +27,7 @@ if __name__ == "__main__":
             employee_id
             )).json()
 
+
     # Creating CSV file
     csv_filename = '{}.csv'.format(employee_id)
 
@@ -38,6 +39,8 @@ if __name__ == "__main__":
                 ["USER_ID", "USERNAME", "TASK_COMPLETED_STATUS", "TASK_TITLE"]
                 )
 
+        # Check the retrieved TODO data
+        print("TODO data:", todo_data)
         # Writing tasks
         for task in todo_data:
             csv_writer.writerow([
