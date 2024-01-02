@@ -2,10 +2,10 @@
 """
 This script exports TODO list data for a given employee ID to a CSV file.
 """
-
 import csv
 import requests
 import sys
+
 
 if __name__ == "__main__":
     # Check if the correct number of command-line arguments is provided
@@ -26,7 +26,6 @@ if __name__ == "__main__":
         'https://jsonplaceholder.typicode.com/todos?userId={}'.format(
             employee_id
             )).json()
-
 
     # Creating CSV file
     csv_filename = '{}.csv'.format(employee_id)

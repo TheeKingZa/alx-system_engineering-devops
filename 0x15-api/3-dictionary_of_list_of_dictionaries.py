@@ -2,13 +2,15 @@
 """
 This script exports TODO list data for all employees to a JSON file.
 """
-
 import json
 import requests
 
+
 if __name__ == "__main__":
     # Fetching all users
-    all_users = requests.get('https://jsonplaceholder.typicode.com/users').json()
+    all_users = requests.get(
+        'https://jsonplaceholder.typicode.com/users'
+        ).json()
 
     # Creating dictionary to store data for all employees
     all_data = {}
@@ -16,11 +18,17 @@ if __name__ == "__main__":
     for user in all_users:
         # Fetching TODO list for each user
         todo_data = requests.get(
-            'https://jsonplaceholder.typicode.com/todos?userId={}'.format(user['id'])
+            'https://jsonplaceholder.typicode.com/todos?userId={}'
+            .format(user['id'])
         ).json()
 
         # Creating list of dictionaries for each user
-        user_data_list = [{"username": user['username'], "task": task['title'], "completed": task['completed']} for task in todo_data]
+        user_data_list = [
+            {"username": user['username'],
+             "task": task['title'],
+             "completed": task['completed']
+             } for task in todo_data
+            ]
 
         # Adding the list to the dictionary with the user ID as the key
         all_data[user['id']] = user_data_list
