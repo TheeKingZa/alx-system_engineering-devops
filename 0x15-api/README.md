@@ -77,7 +77,13 @@ CSV (Comma-Separated Values) is a simple file format used to store tabular data,
 JSON (JavaScript Object Notation) is a lightweight data interchange format. It uses human-readable text to represent data objects consisting of key-value pairs. JSON is widely used for data exchange between a server and a web application.
 
 ```
-    An example JSON object could represent a person's information like {"name": "John", "age": 30, "city": "New York"}.
+    An example JSON object could represent
+    a person's information like
+    {
+        "name": "John",
+         "age": 30,
+          "city": "New York"
+    }.
 ```
 ---
 
