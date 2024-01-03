@@ -108,9 +108,9 @@ Pythonic class names also follow the PEP 8 style guide. They use CapWords (Camel
 # Pythonic Variable name style
 Pythonic variable names use lowercase with underscores, following the PEP 8 style guide. For example, a variable might be named my_variable.
 
-    ```
-    my_variable = 42
-    ```
+```
+my_variable = 42
+```
 ---
 
 [^](#need-to-know)
