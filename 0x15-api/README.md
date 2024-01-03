@@ -155,7 +155,9 @@ CapWords or CamelCase is significant in Python, especially for class names, as i
     ```
 ---
 <div align="center">
-<sub>These examples demonstrates.
+<sub>
+    These examples demonstrates.
+    <hr/>
 The use of each concept in both the context
 of programming practices
 and Python coding styles..</sub>
