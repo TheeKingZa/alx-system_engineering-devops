@@ -57,9 +57,10 @@ Microservices is an architectural approach where a complex application is built 
 ---
 # What is the CSV format
 CSV (Comma-Separated Values) is a simple file format used to store tabular data, such as a spreadsheet or database. Each line of the file represents a row, and the values within a row are separated by commas. It's a common format for data exchange between different applications.
-    ```
+
+```
      Format is used for tabular data. For example, a CSV file might store a list of contacts with columns like "Name," "Email," and "Phone."
-    ```
+```
 
 ---
 
@@ -68,9 +69,10 @@ CSV (Comma-Separated Values) is a simple file format used to store tabular data,
 ---
 # What is the JSON format
 JSON (JavaScript Object Notation) is a lightweight data interchange format. It uses human-readable text to represent data objects consisting of key-value pairs. JSON is widely used for data exchange between a server and a web application.
-    ```
+
+```
     An example JSON object could represent a person's information like {"name": "John", "age": 30, "city": "New York"}.
-    ```
+```
 ---
 
 [^](#need-to-know)
@@ -78,13 +80,14 @@ JSON (JavaScript Object Notation) is a lightweight data interchange format. It u
 ---
 # Pythonic Package and module name style
 Pythonic package and module names follow the PEP 8 style guide. They are typically lowercase with underscores separating words. For example, a package might be named my_package and a module within that package might be named my_module.
-    ```
+
+```
     # In a Python package (folder)
     # my_package/__init__.py
 
     # In a Python module (file)
     # my_package/my_module.py
-    ```
+```
 ---
 
 [^](#need-to-know)
@@ -120,8 +123,8 @@ my_variable = 42
 Pythonic function names also use lowercase with underscores, adhering to the PEP 8 style guide. For example, a function might be named my_function.
 
 ```
-def my_function(parameter1, parameter2):
-return parameter1 + parameter2
+    def my_function(parameter1, parameter2):
+        return parameter1 + parameter2
 ```
 ---
 
@@ -130,9 +133,10 @@ return parameter1 + parameter2
 ---
 # Pythonic Constant name style
 Pythonic constant names, like variables, use uppercase with underscores. Constants represent values that should not be changed during the program's execution. For example, a constant might be named MY_CONSTANT.
-    ```
+
+```
     MY_CONSTANT = 3.14
-    ```
+```
 ---
 
 [^](#need-to-know)
@@ -140,7 +144,8 @@ Pythonic constant names, like variables, use uppercase with underscores. Constan
 ---
 # Significance of CapWords or CamelCase in Python
 CapWords or CamelCase is significant in Python, especially for class names, as it helps distinguish them from functions and variables. This naming convention enhances code readability and is widely adopted in the Python community.
-    ```
+
+```
     class MyExampleClass:
         def __init__(self, value):
             self.value = value
@@ -154,7 +159,7 @@ CapWords or CamelCase is significant in Python, especially for class names, as i
     # Call a method
     example_instance.display_value()
 
-    ```
+```
 ---
 <div align="center">
 <sub>
