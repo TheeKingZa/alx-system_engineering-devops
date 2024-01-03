@@ -92,14 +92,14 @@ Pythonic package and module names follow the PEP 8 style guide. They are typical
 ---
 # Pythonic Class name style
 Pythonic class names also follow the PEP 8 style guide. They use CapWords (CamelCase) style, where the first letter of each word is capitalized. For example, a class might be named MyClass.
-    ```
+```
     class MyClass:
     def __init__(self, name):
         self.name = name
 
     def get_name(self):
         return self.name
-    ```
+```
 ---
 
 [^](#need-to-know)
@@ -119,10 +119,10 @@ my_variable = 42
 # Pythonic Function name style
 Pythonic function names also use lowercase with underscores, adhering to the PEP 8 style guide. For example, a function might be named my_function.
 
-    ```
-    def my_function(parameter1, parameter2):
-    return parameter1 + parameter2
-    ```
+```
+def my_function(parameter1, parameter2):
+return parameter1 + parameter2
+```
 ---
 
 [^](#need-to-know)
