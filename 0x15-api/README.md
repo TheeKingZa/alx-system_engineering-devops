@@ -59,7 +59,13 @@ Microservices is an architectural approach where a complex application is built 
 CSV (Comma-Separated Values) is a simple file format used to store tabular data, such as a spreadsheet or database. Each line of the file represents a row, and the values within a row are separated by commas. It's a common format for data exchange between different applications.
 
 ```
-     Format is used for tabular data. For example, a CSV file might store a list of contacts with columns like "Name," "Email," and "Phone."
+     Format is used for tabular data.
+     For example, a CSV file might store
+     a list of contacts with columns
+     like 
+        * Name,
+        * Email,
+    and * Phone.
 ```
 
 ---
