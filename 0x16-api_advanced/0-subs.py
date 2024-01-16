@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """
-0-subs.py - Fetches the number of subscribers for a given subreddit using the Reddit API.
+0-subs.py - Fetches the number of subscribers
+for a given subreddit using the Reddit API.
 """
-
 import requests
+
 
 def number_of_subscribers(subreddit):
     """
@@ -12,14 +13,14 @@ def number_of_subscribers(subreddit):
     """
     # Construct the URL for the subreddit information endpoint
     url = f"https://www.reddit.com/r/{subreddit}/about.json"
-    
+
     # Set a custom User-Agent to avoid API restrictions
     headers = {"User-Agent": "custom_user_agent"}
 
     try:
         # Send a GET request to the Reddit API
         response = requests.get(url, headers=headers, allow_redirects=False)
-        
+
         # Check if the request was successful (status code 200)
         if response.status_code == 200:
             # Parse the JSON response to extract subscriber count
