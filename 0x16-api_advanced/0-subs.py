@@ -5,32 +5,41 @@ for a given subreddit using the Reddit API.
 """
 import requests
 
-
 def number_of_subscribers(subreddit):
     """
-    Returns the number of subscribers for a given subreddit.
-    If the subreddit is invalid, returns 0.
+    Queries the Reddit API and returns the number of subscribers for a given subreddit.
+
+    Args:
+        subreddit (str): The name of the subreddit.
+
+    Returns:
+        int: Number of subscribers for the subreddit, or 0 if the subreddit is invalid.
     """
-    # Construct the URL for the subreddit information endpoint
-    url = f"https://www.reddit.com/r/{subreddit}/about.json"
+    # Set a custom User-Agent to avoid Too Many Requests error
+    headers = {'User-Agent': 'CustomUserAgent'}
 
-    # Set a custom User-Agent to avoid API restrictions
-    headers = {"User-Agent": "custom_user_agent"}
+    # Reddit API endpoint for subreddit information
+    url = f'https://www.reddit.com/r/{subreddit}/about.json'
 
-    try:
-        # Send a GET request to the Reddit API
-        response = requests.get(url, headers=headers, allow_redirects=False)
+    # Send GET request to the Reddit API
+    response = requests.get(url, headers=headers)
 
-        # Check if the request was successful (status code 200)
-        if response.status_code == 200:
-            # Parse the JSON response to extract subscriber count
-            data = response.json()
-            subscribers_count = data['data']['subscribers']
-            return subscribers_count
-        else:
-            # Return 0 for invalid subreddits or other errors
-            return 0
-    except Exception as e:
-        # Print an error message if an exception occurs during the request
-        print(f"Error: {e}")
+    # Check if the request was successful (status code 200)
+    if response.status_code == 200:
+        # Parse the JSON response to get the number of subscribers
+        data = response.json()
+        subscribers = data['data']['subscribers']
+        return subscribers
+    elif response.status_code == 404:
+        # Subreddit not found, return 0
+        print(f"Subreddit '{subreddit}' not found.")
         return 0
+    else:
+        # Other error, return 0
+        print(f"Error: {response.status_code}")
+        return 0
+
+# Example usage
+subreddit_name = "learnpython"
+result = number_of_subscribers(subreddit_name)
+print(f"The number of subscribers for subreddit '{subreddit_name}' is: {result}")
