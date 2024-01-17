@@ -1,46 +1,49 @@
 #!/usr/bin/python3
+'''
+Module contains a function that makes an API call
+'''
 import requests
 
 
-def recurse(subreddit, hot_list=[], after=None):
-    """
-    Recursively queries the Reddit API and returns a list of titles for
-    all hot articles in a given subreddit.
-    If the subreddit is invalid or no results are found, returns None.
-    """
+def recurse(subreddit, hot_list=None, after=None):
+    '''
+    Makes an API call to get the top hot posts in
+    a given subreddit recursively.
+
+    Args:
+        subreddit (str): The name of the subreddit to check.
+        hot_list (list): A list to store the titles of the hot posts.
+        after (str): Token for pagination.
+
+    Returns:
+        list or None: List of titles for the top hot posts,
+        or None if the subreddit is invalid.
+    '''
+    if hot_list is None:
+        hot_list = []
+
     url = f"https://www.reddit.com/r/{subreddit}/hot.json"
 
-    headers = {'User-agent': 'my-bot'}
     params = {'after': after} if after else {}
-    # Simplify handling of 'after' parameter
 
-    try:
-        response = requests.get(
-                url, headers=headers, params=params, allow_redirects=False
-                )
+    data = requests.get(url, headers={'User-agent': 'my-bot'},
+                        params=params, allow_redirects=False)
 
-        if response.status_code == 200:
-            data = response.json().get('data')
-            after = data.get('after')
-            post_list = data.get('children')
+    if data.status_code == 200:
+        after = data.json().get('data').get('after')
+        post_list = data.json().get('data').get('children')
 
-            # Use list comprehension for a more concise code
-            hot_list.extend(
-                    [post.get("data").get("title") for post in post_list]
-                    )
+        for post in post_list:
+            hot_list.append(post.get("data").get("title"))
 
-            if after is not None:
-                # If there is another page, recursively call
-                # the function with the next 'after' parameter
-                return recurse(subreddit, hot_list, after)
-            else:
-                # If there is no new page,
-                # check for an empty hot_list and return None
-                return hot_list if hot_list else None
+        if after is None:
+            # If there is no new page
+            if len(hot_list) == 0:
+                return None
+
+            return hot_list
         else:
-            # Return None for non-200 status codes
-            return None
-    except Exception as e:
-        # Print an error message if an exception occurs during the request
-        print(f"Error: {e}")
+            # If there is another page
+            return recurse(subreddit, hot_list, after)
+    else:
         return None
