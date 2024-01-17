@@ -4,15 +4,19 @@ Module contains a function that makes an api call
 '''
 import requests
 
+
 def number_of_subscribers(subreddit):
     '''
-    Makes an API call to get the number of subscribers in a given subreddit.
+    Makes an API call to get the number of
+    subscribers in a given subreddit.
 
     Args:
-        subreddit (str): The name of the subreddit to check the number of subscribers.
-        
+        subreddit (str): The name of the subreddit
+        to check the number of subscribers.
+
     Returns:
-        int: Number of subscribers for the subreddit, or 0 if the subreddit is invalid.
+        int: Number of subscribers for the subreddit,
+        or 0 if the subreddit is invalid.
     '''
     # URL for the Reddit API endpoint
     url = "https://www.reddit.com/r/{}/about.json".format(subreddit)
