@@ -1,13 +1,14 @@
 #!/usr/bin/python3
 '''
-Module contains a function that makes an api call
+Module contains a function that makes an API call
 '''
 import requests
 
 
 def top_ten(subreddit):
     '''
-    Makes an API call to get the top ten hot posts in a given subreddit.
+    Makes an API call to get the top ten hot posts
+    in a given subreddit.
 
     Args:
         subreddit (str): The name of the subreddit to check.
