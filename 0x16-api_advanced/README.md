@@ -26,14 +26,16 @@
 ---
 
 # NEED TO KNOW?
-* [How to read API documentation to find the endpoints you’re looking for]()
-* [How to use an API with pagination]()
-* [How to parse JSON results from an API]()
-* [How to make a recursive API call]()
-* [How to sort a dictionary by value]()
+* [How to read API documentation to find the endpoints you’re looking for](#how-to-read-api-documentation-to-find-the-endpoints-you're-looking-for)
+* [How to use an API with pagination](#how-to-use-an-api)
+* [How to parse JSON results from an API](#how-to-parse-json-results-from-an-api)
+* [How to make a recursive API call](#how-to-make-a-recursive-api-call)
+* [How to sort a dictionary by value](#how-to-sort-a-dictionary-by-value)
+
 ---
 
 # How to read API documentation to find the endpoints you’re looking for:
+
 ```
   When exploring the Reddit API documentation,
   look for sections that describe available endpoints.
@@ -46,6 +48,7 @@
 [^](#need-to-know)
 
 ---
+
 # How to use an API with pagination:
 ```
   APIs often use pagination to limit the number of results returned in a single response.
@@ -59,14 +62,16 @@
 [^](#need-to-know)
 
 ---
-# How to parse JSON results from an API:
-* After making an API request, the response is typically in JSON format. Use your programming language's JSON parsing capabilities. In Python, for example, you can use the json module:
-```
-  import json
 
-  response_data = '{"key": "value"}'
-  parsed_data = json.loads(response_data)
-  print(parsed_data['key'])  # Accessing the parsed data
+# How to parse JSON results from an API:
+
+  * After making an API request, the response is typically in JSON format. Use your programming language's JSON parsing capabilities. In Python, for example, you can use the json module:
+```
+    import json
+
+    response_data = '{"key": "value"}'
+    parsed_data = json.loads(response_data)
+    print(parsed_data['key'])  # Accessing the parsed data
 
 ```
 ---
@@ -74,7 +79,9 @@
 [^](#need-to-know)
 
 ---
+
 # How to make a recursive API call:
+
 ```
   Recursive API calls are often needed for paginated responses.
   Design a function that calls the API and,
