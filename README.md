@@ -26,6 +26,7 @@
    * [API](https://github.com/TheeKingZa/alx-system_engineering-devops/tree/master/0x15-api/README.md)
    * [API Advanced](https://github.com/TheeKingZa/alx-system_engineering-devops/blob/master/0x16-api_advanced/README.md)
    * [Web Stacking Debugging 3](https://github.com/TheeKingZa/alx-system_engineering-devops/blob/master/0x17-web_stack_debugging_3/README.md)
+   * [Webstack Monitoring](https://github.com/TheeKingZa/alx-system_engineering-devops/tree/master/0x18-webstack_monitoring/README.md)
 ---
 # Optional Tasks
 * [Attack Is The Best Defense](https://github.com/TheeKingZa/alx-system_engineering-devops/tree/master/attack_is_the_best_defense/README.md)
