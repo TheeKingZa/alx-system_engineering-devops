@@ -1,4 +1,4 @@
-0. My first postmortem
+# 0. My first postmortem
 
 # Postmortem: Web Stack Debugging Outage
 
@@ -44,7 +44,7 @@ This incident serves as a valuable learning opportunity, emphasizing the importa
 *Note: This postmortem adheres to the specified format, offering a concise overview of the incident, its timeline, root cause, resolution, and proposed corrective measures.*
 
 
-1. Make people want to read your postmortem.
+# 1. Make people want to read your postmortem.
 
 # Postmortem: Web Stack Debugging Extravaganza 🚀
 
