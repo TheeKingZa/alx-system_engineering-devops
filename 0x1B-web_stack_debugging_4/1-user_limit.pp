@@ -21,8 +21,8 @@ file_line { 'increase_file_limit':
 
 # Notify SSH service to reload configuration
 service { 'ssh':
-  ensure  => 'running',
-  enable  => true,
-  require => File_line['allow_holberton_login'],
+  ensure    => 'running',
+  enable    => true,
+  require   => File_line['allow_holberton_login'],
   subscribe => File_line['increase_file_limit'],
 }
