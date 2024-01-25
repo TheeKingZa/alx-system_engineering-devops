@@ -1,28 +1,13 @@
-# Puppet manifest to configure OS settings for the holberton user
+# This manuscript enables the user holberton to login and open files without error
 
-# Ensure holberton user exists
-user { 'holberton':
-  ensure => 'present',
+# Increase hard file limit for user holberton
+exec { 'increase-hard-file-limit-for-holberton-user':
+  command => 'sed -i "/holberton hard/s/5/50000/" /etc/security/limits.conf',
+  path    => '/usr/local/bin/:/bin/'  # Specify the path for the shell command
 }
 
-# Allow holberton user to login
-file_line { 'allow_holberton_login':
-  path  => '/etc/ssh/sshd_config',
-  line  => 'AllowUsers holberton',
-  match => '^#?AllowUsers',
-}
-
-# Set higher file descriptor limit for holberton user
-file_line { 'increase_file_limit':
-  path  => '/etc/security/limits.conf',
-  line  => 'holberton hard nofile 4096',
-  match => '^#?holberton hard nofile',
-}
-
-# Notify SSH service to reload configuration
-service { 'ssh':
-  ensure    => 'running',
-  enable    => true,
-  require   => File_line['allow_holberton_login'],
-  subscribe => File_line['increase_file_limit'],
+# Increase soft file limit for user holberton
+exec { 'increase-soft-file-limit-for-holberton-user':
+  command => 'sed -i "/holberton soft/s/4/50000/" /etc/security/limits.conf',
+  path    => '/usr/local/bin/:/bin/'  # Specify the path for the shell command
 }
